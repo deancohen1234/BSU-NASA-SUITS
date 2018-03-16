@@ -7,8 +7,8 @@
 # Default behavior is to never overwrite files
 Origami.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 1D02BC64BAC0D041019673A1C4C51737
-Origami\App.cs: 840E91E0EB643ED8B47F120976B0BFC3
-Origami\Origami.csproj: modified
+Origami\App.cs: modified
+Origami\Origami.csproj: 22554768BBDDFBB2C51234FFF4B020C5
 Origami\Origami.csproj.user: modified
 Origami\Package.appxmanifest: 99FEDF13FC78D05D1302EE865522E068
 Origami\project.json: 1D02BC64BAC0D041019673A1C4C51737

@@ -12672,7 +12672,7 @@
       ]
     },
     "Microsoft.NETCore.Runtime.CoreCLR-arm/1.0.0": {
-      "sha512": "vUQyaKbHCa7BJAAzdfCP2FfBYOSt0YnDw7VMJLmD1/k68HIJgw1QO7GAfHhqoa39zkkvimC47QBH27wG4C5OGQ==",
+      "sha512": "hoJfIl981eXwn9Tz8onO/J1xaYApIfp/YrhjSh9rRhml1U5Wj80LBgyp/6n+KI3VlvcAraThhnHnCTp+M3Uh+w==",
       "type": "package",
       "path": "microsoft.netcore.runtime.coreclr-arm/1.0.0",
       "files": [
@@ -15774,23 +15774,23 @@
     "UAP,Version=v10.0.10240": []
   },
   "packageFolders": {
-    "C:\\Users\\Brenna\\.nuget\\packages\\": {},
+    "C:\\Users\\othm\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Brenna\\Downloads\\HolographicAcademy-Holograms-101\\HolographicAcademy-Holograms-101\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
+      "projectUniqueName": "C:\\Users\\othm\\Documents\\College!\\GIMM Stuff\\NASA\\gitProject\\BSU-NASA-SUITS\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "C:\\Users\\Brenna\\Downloads\\HolographicAcademy-Holograms-101\\HolographicAcademy-Holograms-101\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
-      "projectJsonPath": "C:\\Users\\Brenna\\Downloads\\HolographicAcademy-Holograms-101\\HolographicAcademy-Holograms-101\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\project.json",
-      "packagesPath": "C:\\Users\\Brenna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Brenna\\Downloads\\HolographicAcademy-Holograms-101\\HolographicAcademy-Holograms-101\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\obj\\x86\\Release\\",
+      "projectPath": "C:\\Users\\othm\\Documents\\College!\\GIMM Stuff\\NASA\\gitProject\\BSU-NASA-SUITS\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj",
+      "projectJsonPath": "C:\\Users\\othm\\Documents\\College!\\GIMM Stuff\\NASA\\gitProject\\BSU-NASA-SUITS\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\project.json",
+      "packagesPath": "C:\\Users\\othm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\othm\\Documents\\College!\\GIMM Stuff\\NASA\\gitProject\\BSU-NASA-SUITS\\Origami\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\obj\\x86\\Release\\",
       "projectStyle": "ProjectJson",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Brenna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\othm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

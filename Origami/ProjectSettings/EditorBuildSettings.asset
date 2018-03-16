@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Oragami.unity
     guid: 5634a694093ccff4684a8f400cefd60e
+  - enabled: 1
+    path: Assets/MenuAnchoring.unity
+    guid: c998318599873f3489b730178951baf6
