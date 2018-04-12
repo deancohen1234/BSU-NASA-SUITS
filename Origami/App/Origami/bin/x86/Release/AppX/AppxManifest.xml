@@ -86,9 +86,6 @@
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.27128.1" />
     <build:Item Name="WindowsMobile" Version="10.0.16299.0" />
-    <build:Item Name="WindowsDesktop" Version="10.0.16299.0" />
-    <build:Item Name="WindowsIoT" Version="10.0.16299.0" />
-    <build:Item Name="WindowsTeam" Version="10.0.16299.0" />
     <build:Item Name="MakePri.exe" Version="10.0.16299.15 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>
