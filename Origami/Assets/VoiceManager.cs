@@ -18,14 +18,32 @@ public class VoiceManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () { 
         _keywords.Add("Menu", Menu);
-        _keywords.Add("Next", Next); 
+        _keywords.Add("Next", Next);
+        _keywords.Add("Go", Next); 
+        _keywords.Add("Back", Back);
+
 
         _keywordRecognizer = new KeywordRecognizer(_keywords.Keys.ToArray());
         _keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         _keywordRecognizer.Start();
 
         curMenu = null;
-        mc = menuController.GetComponent<MenuController>();
+        mc = FindObjectOfType(typeof(MenuController)) as MenuController;
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            Next();
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Menu();
+        }
+
+        
+
     }
 
     private void Menu()
@@ -35,10 +53,18 @@ public class VoiceManager : MonoBehaviour {
 
     private void Next()
     {
-        if (curMenu.Equals(mainMenu))
-        {
-            mc.ChangeMenu(curMenu, mc.m_NextMenu); 
-        }
+
+        //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_NextMenu); 
+        mc.NextTask();
+        
+    }
+
+    private void Back()
+    {
+
+        //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_NextMenu); 
+        mc.PreviousTask();
+
     }
 
     private void ToggleVisibility(GameObject holoMenu)

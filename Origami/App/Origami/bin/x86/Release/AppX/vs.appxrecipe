@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\bin\x86\Release\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T20:51:59.813</Modified>
+      <Modified>2018-04-12T22:32:01.162</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\bin\x86\Release\Origami.exe">
       <PackagePath>entrypoint\Origami.exe</PackagePath>
-      <Modified>2018-04-09T20:51:48.860</Modified>
+      <Modified>2018-04-12T22:31:48.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\.nuget\packages\microsoft.applicationinsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -501,7 +501,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Resource.res">
       <PackagePath>Resource.res</PackagePath>
-      <Modified>2018-04-09T20:51:08.856</Modified>
+      <Modified>2018-04-12T22:31:19.033</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
@@ -543,15 +543,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
-      <Modified>2018-04-09T20:50:16.428</Modified>
+      <Modified>2018-04-12T22:30:23.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\globalgamemanagers">
       <PackagePath>Data\globalgamemanagers</PackagePath>
-      <Modified>2018-04-09T20:50:15.545</Modified>
+      <Modified>2018-04-12T22:30:22.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\level0">
       <PackagePath>Data\level0</PackagePath>
-      <Modified>2018-04-09T20:50:14.517</Modified>
+      <Modified>2018-04-12T22:30:15.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\Resources\unity default resources">
       <PackagePath>Data\Resources\unity default resources</PackagePath>
@@ -559,39 +559,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\Resources\unity_builtin_extra">
       <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
-      <Modified>2018-04-09T20:50:16.424</Modified>
+      <Modified>2018-04-12T22:30:23.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\globalgamemanagers.assets">
       <PackagePath>Data\globalgamemanagers.assets</PackagePath>
-      <Modified>2018-04-09T20:50:15.777</Modified>
+      <Modified>2018-04-12T22:30:23.016</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\resources.assets">
       <PackagePath>Data\resources.assets</PackagePath>
-      <Modified>2018-04-09T20:50:15.825</Modified>
+      <Modified>2018-04-12T22:30:23.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
-      <Modified>2018-04-09T20:50:15.968</Modified>
+      <Modified>2018-04-12T22:30:23.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\level0.resS">
       <PackagePath>Data\level0.resS</PackagePath>
-      <Modified>2018-04-09T20:50:14.517</Modified>
+      <Modified>2018-04-12T22:30:15.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\sharedassets0.assets.resS">
       <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
-      <Modified>2018-04-09T20:50:15.968</Modified>
+      <Modified>2018-04-12T22:30:23.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\managedAssemblies.txt">
       <PackagePath>Data\managedAssemblies.txt</PackagePath>
-      <Modified>2018-04-09T20:51:08.794</Modified>
+      <Modified>2018-04-12T22:31:18.969</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\nativePlugins.txt">
       <PackagePath>Data\nativePlugins.txt</PackagePath>
-      <Modified>2018-04-09T20:51:08.796</Modified>
+      <Modified>2018-04-12T22:31:18.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\resources.resource">
       <PackagePath>Data\resources.resource</PackagePath>
-      <Modified>2018-04-09T20:50:15.827</Modified>
+      <Modified>2018-04-12T22:30:23.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -600,223 +600,223 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\bin\x86\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-09T18:23:01.680</Modified>
+      <Modified>2018-04-12T21:52:11.555</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TilemapModule.dll">
       <PackagePath>UnityEngine.TilemapModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.212</Modified>
+      <Modified>2018-04-12T22:31:59.206</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TextRenderingModule.dll">
       <PackagePath>UnityEngine.TextRenderingModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.228</Modified>
+      <Modified>2018-04-12T22:31:59.227</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TerrainPhysicsModule.dll">
       <PackagePath>UnityEngine.TerrainPhysicsModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.235</Modified>
+      <Modified>2018-04-12T22:31:59.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UIElementsModule.dll">
       <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.295</Modified>
+      <Modified>2018-04-12T22:31:59.289</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TerrainModule.dll">
       <PackagePath>UnityEngine.TerrainModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.306</Modified>
+      <Modified>2018-04-12T22:31:59.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SpriteMaskModule.dll">
       <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.313</Modified>
+      <Modified>2018-04-12T22:31:59.322</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SharedInternalsModule.dll">
       <PackagePath>UnityEngine.SharedInternalsModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.320</Modified>
+      <Modified>2018-04-12T22:31:59.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.StyleSheetsModule.dll">
       <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.327</Modified>
+      <Modified>2018-04-12T22:31:59.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SpriteShapeModule.dll">
       <PackagePath>UnityEngine.SpriteShapeModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.334</Modified>
+      <Modified>2018-04-12T22:31:59.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UIModule.dll">
       <PackagePath>UnityEngine.UIModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.341</Modified>
+      <Modified>2018-04-12T22:31:59.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.VRModule.dll">
       <PackagePath>UnityEngine.VRModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.363</Modified>
+      <Modified>2018-04-12T22:31:59.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.VideoModule.dll">
       <PackagePath>UnityEngine.VideoModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.371</Modified>
+      <Modified>2018-04-12T22:31:59.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.VehiclesModule.dll">
       <PackagePath>UnityEngine.VehiclesModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.377</Modified>
+      <Modified>2018-04-12T22:31:59.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.WindModule.dll">
       <PackagePath>UnityEngine.WindModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.383</Modified>
+      <Modified>2018-04-12T22:31:59.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.WebModule.dll">
       <PackagePath>UnityEngine.WebModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.391</Modified>
+      <Modified>2018-04-12T22:31:59.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestWWWModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.398</Modified>
+      <Modified>2018-04-12T22:31:59.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityConnectModule.dll">
       <PackagePath>UnityEngine.UnityConnectModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.405</Modified>
+      <Modified>2018-04-12T22:31:59.478</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityAnalyticsModule.dll">
       <PackagePath>UnityEngine.UnityAnalyticsModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.411</Modified>
+      <Modified>2018-04-12T22:31:59.486</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UNETModule.dll">
       <PackagePath>UnityEngine.UNETModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.424</Modified>
+      <Modified>2018-04-12T22:31:59.502</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestTextureModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestTextureModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.431</Modified>
+      <Modified>2018-04-12T22:31:59.510</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.442</Modified>
+      <Modified>2018-04-12T22:31:59.521</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestAudioModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.448</Modified>
+      <Modified>2018-04-12T22:31:59.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.CoreModule.dll">
       <PackagePath>UnityEngine.CoreModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.678</Modified>
+      <Modified>2018-04-12T22:31:59.775</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ClothModule.dll">
       <PackagePath>UnityEngine.ClothModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.685</Modified>
+      <Modified>2018-04-12T22:31:59.784</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AudioModule.dll">
       <PackagePath>UnityEngine.AudioModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.697</Modified>
+      <Modified>2018-04-12T22:31:59.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.dll">
       <PackagePath>UnityEngine.dll</PackagePath>
-      <Modified>2018-04-09T20:50:35.537</Modified>
+      <Modified>2018-04-12T22:30:43.872</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.DirectorModule.dll">
       <PackagePath>UnityEngine.DirectorModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.704</Modified>
+      <Modified>2018-04-12T22:31:59.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.CrashReportingModule.dll">
       <PackagePath>UnityEngine.CrashReportingModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.711</Modified>
+      <Modified>2018-04-12T22:31:59.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AssetBundleModule.dll">
       <PackagePath>UnityEngine.AssetBundleModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.717</Modified>
+      <Modified>2018-04-12T22:31:59.821</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AccessibilityModule.dll">
       <PackagePath>UnityEngine.AccessibilityModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.724</Modified>
+      <Modified>2018-04-12T22:31:59.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Assembly-CSharp.dll">
       <PackagePath>Assembly-CSharp.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.752</Modified>
+      <Modified>2018-04-12T22:31:59.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ARModule.dll">
       <PackagePath>UnityEngine.ARModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.760</Modified>
+      <Modified>2018-04-12T22:31:59.877</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AnimationModule.dll">
       <PackagePath>UnityEngine.AnimationModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.774</Modified>
+      <Modified>2018-04-12T22:31:59.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AIModule.dll">
       <PackagePath>UnityEngine.AIModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.783</Modified>
+      <Modified>2018-04-12T22:31:59.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.GameCenterModule.dll">
       <PackagePath>UnityEngine.GameCenterModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.791</Modified>
+      <Modified>2018-04-12T22:31:59.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.PerformanceReportingModule.dll">
       <PackagePath>UnityEngine.PerformanceReportingModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.797</Modified>
+      <Modified>2018-04-12T22:31:59.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ParticleSystemModule.dll">
       <PackagePath>UnityEngine.ParticleSystemModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.822</Modified>
+      <Modified>2018-04-12T22:31:59.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ParticlesLegacyModule.dll">
       <PackagePath>UnityEngine.ParticlesLegacyModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.829</Modified>
+      <Modified>2018-04-12T22:31:59.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ScreenCaptureModule.dll">
       <PackagePath>UnityEngine.ScreenCaptureModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.835</Modified>
+      <Modified>2018-04-12T22:31:59.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.PhysicsModule.dll">
       <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.848</Modified>
+      <Modified>2018-04-12T22:31:59.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.Physics2DModule.dll">
       <PackagePath>UnityEngine.Physics2DModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.863</Modified>
+      <Modified>2018-04-12T22:31:59.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ImageConversionModule.dll">
       <PackagePath>UnityEngine.ImageConversionModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.869</Modified>
+      <Modified>2018-04-12T22:32:00.009</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.GridModule.dll">
       <PackagePath>UnityEngine.GridModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.876</Modified>
+      <Modified>2018-04-12T22:32:00.020</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.JSONSerializeModule.dll">
       <PackagePath>UnityEngine.JSONSerializeModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.882</Modified>
+      <Modified>2018-04-12T22:32:00.028</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.InputModule.dll">
       <PackagePath>UnityEngine.InputModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.889</Modified>
+      <Modified>2018-04-12T22:32:00.037</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.IMGUIModule.dll">
       <PackagePath>UnityEngine.IMGUIModule.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.907</Modified>
+      <Modified>2018-04-12T22:32:00.064</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.Timeline.dll">
       <PackagePath>UnityEngine.Timeline.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.947</Modified>
+      <Modified>2018-04-12T22:32:00.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\nunit.framework.dll">
       <PackagePath>nunit.framework.dll</PackagePath>
-      <Modified>2018-04-09T20:51:58.984</Modified>
+      <Modified>2018-04-12T22:32:00.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UI.dll">
       <PackagePath>UnityEngine.UI.dll</PackagePath>
-      <Modified>2018-04-09T20:51:59.072</Modified>
+      <Modified>2018-04-12T22:32:00.306</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SpatialTracking.dll">
       <PackagePath>UnityEngine.SpatialTracking.dll</PackagePath>
-      <Modified>2018-04-09T20:51:59.080</Modified>
+      <Modified>2018-04-12T22:32:00.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.HoloLens.dll">
       <PackagePath>UnityEngine.HoloLens.dll</PackagePath>
-      <Modified>2018-04-09T20:51:59.097</Modified>
+      <Modified>2018-04-12T22:32:00.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.StandardEvents.dll">
       <PackagePath>UnityEngine.StandardEvents.dll</PackagePath>
-      <Modified>2018-04-09T20:51:59.109</Modified>
+      <Modified>2018-04-12T22:32:00.351</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.Networking.dll">
       <PackagePath>UnityEngine.Networking.dll</PackagePath>
-      <Modified>2018-04-09T20:51:59.208</Modified>
+      <Modified>2018-04-12T22:32:00.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\bin\x86\Release\Core\Origami.exe">
       <PackagePath>Origami.exe</PackagePath>
-      <Modified>2018-04-09T20:51:59.799</Modified>
+      <Modified>2018-04-12T22:32:01.155</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

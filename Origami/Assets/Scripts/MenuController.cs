@@ -7,11 +7,19 @@ public class MenuController : MonoBehaviour
     public GameObject m_OGMenu;
     public GameObject m_NextMenu;
 
-    private GameObject m_CurrentMenu;
+    public GameObject m_CurrentMenu;
     private GameObject m_PreviousMenu;
 
+    public GameObject[] m_TaskListArray;
+
+    private int m_CurrentTaskIndex = 0;
+
+    public void Start()
+    {
+        m_CurrentMenu = m_OGMenu;
+    }
     //hide old menu, and switch to new menu
-	public void ChangeMenu(GameObject oldMenu, GameObject newMenu)
+    public void ChangeMenu(GameObject oldMenu, GameObject newMenu)
     {
         m_CurrentMenu = newMenu;
         m_PreviousMenu = oldMenu;
@@ -31,6 +39,21 @@ public class MenuController : MonoBehaviour
 
         m_CurrentMenu.SetActive(false);
         m_PreviousMenu.SetActive(true);
+    }
+
+    public void NextTask()
+    {
+        ChangeMenu(m_TaskListArray[m_CurrentTaskIndex], m_TaskListArray[m_CurrentTaskIndex + 1]);
+
+        m_CurrentTaskIndex++;
+
+    }
+
+    public void PreviousTask()
+    {
+        ChangeMenu(m_TaskListArray[m_CurrentTaskIndex], m_TaskListArray[m_CurrentTaskIndex - 1]);
+
+        m_CurrentTaskIndex--;
     }
 
     public void Update()

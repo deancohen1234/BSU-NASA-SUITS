@@ -489,7 +489,7 @@ Prefab:
     - target: {fileID: 23867641754644510, guid: 653fc43e62adc584f85f81b58267c6eb,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 653fc43e62adc584f85f81b58267c6eb, type: 2}
@@ -721,8 +721,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4649b577e26558f429184e49d2604ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OGMenu: {fileID: 1458849306}
+  m_OGMenu: {fileID: 220098394}
   m_NextMenu: {fileID: 1170470599}
+  m_CurrentMenu: {fileID: 0}
+  m_TaskListArray:
+  - {fileID: 220098394}
+  - {fileID: 1170470599}
+  - {fileID: 1458849306}
 --- !u!4 &1221139677
 Transform:
   m_ObjectHideFlags: 0
