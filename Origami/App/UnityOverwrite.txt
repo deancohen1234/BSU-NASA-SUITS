@@ -6,6 +6,7 @@
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
 Origami.sln: D9F74BE021B0029D7C7E7AE380FF14E3
+Origami.sln.metaproj: 593C027B39FCD85EB5CEDFA94EA8672E
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 1D02BC64BAC0D041019673A1C4C51737
 Origami\App.cs: modified
 Origami\Origami.csproj: C58854F64F1D589ED691059E77F11FF9
@@ -18,6 +19,13 @@ Origami\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
 Origami\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
 Origami\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
 Origami\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
+Origami\bin\x86\Master\AppX\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
+Origami\bin\x86\Master\AppX\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
+Origami\bin\x86\Master\AppX\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
+Origami\bin\x86\Master\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
+Origami\bin\x86\Master\AppX\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
+Origami\bin\x86\Master\AppX\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
+Origami\bin\x86\Master\AppX\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
 Origami\bin\x86\Release\AppX\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
 Origami\bin\x86\Release\AppX\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
 Origami\bin\x86\Release\AppX\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
@@ -25,5 +33,6 @@ Origami\bin\x86\Release\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplat
 Origami\bin\x86\Release\AppX\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
 Origami\bin\x86\Release\AppX\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
 Origami\bin\x86\Release\AppX\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
+Origami\obj\x86\Master\Origami.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
 Origami\obj\x86\Release\Origami.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
 Origami\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826

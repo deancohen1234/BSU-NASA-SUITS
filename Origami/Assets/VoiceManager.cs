@@ -18,6 +18,7 @@ public class VoiceManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () { 
         _keywords.Add("Menu", Menu);
+        _keywords.Add("Move", Menu); 
         _keywords.Add("Next", Next);
         _keywords.Add("Go", Next); 
         _keywords.Add("Back", Back);
@@ -28,6 +29,7 @@ public class VoiceManager : MonoBehaviour {
         _keywordRecognizer.Start();
 
         curMenu = null;
+
         mc = FindObjectOfType(typeof(MenuController)) as MenuController;
     }
     private void Update()
@@ -48,7 +50,7 @@ public class VoiceManager : MonoBehaviour {
 
     private void Menu()
     {
-        ToggleVisibility(mainMenu); 
+        ToggleVisibility(mc.m_CurrentMenu); 
     }
 
     private void Next()
@@ -72,22 +74,27 @@ public class VoiceManager : MonoBehaviour {
         //var holoMenu = GameObject.Find("SuitsMenuTwo");
         if (holoMenu == null) return;
 
+        if (mc.m_CurrentMenu != null)
+        {
+            mc.m_CurrentMenu.SetActive(false);
+        }
+
         _visible = !_visible;
         //var rend = holoMenu.GetComponent<Renderer>();
         //if (rend != null) rend.enabled = _visible;
 
-        holoMenu.SetActive(true); 
+        holoMenu.SetActive(true);
 
-        holoMenu.transform.localScale = Vector3.one * 0.3f;
         holoMenu.transform.position =
-            Camera.main.transform.position + Camera.main.transform.forward;
+            Camera.main.transform.position + (Camera.main.transform.forward);
 
         Vector3 cameraPos = Camera.main.transform.position;
 
-        holoMenu.transform.LookAt(Camera.main.transform);
-        holoMenu.transform.eulerAngles += new Vector3(-90, 0, 0); 
+        holoMenu.transform.rotation = Quaternion.Euler(new Vector3(holoMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z));
 
-        curMenu = holoMenu; 
+        holoMenu.transform.position += new Vector3(0, .125f, 0);
+
+        mc.m_CurrentMenu = holoMenu; 
     }
 
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
