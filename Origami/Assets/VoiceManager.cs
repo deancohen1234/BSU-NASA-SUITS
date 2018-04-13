@@ -2,7 +2,8 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows.Speech; 
+using UnityEngine.Windows.Speech;
+using UnityEngine.SceneManagement;
 
 public class VoiceManager : MonoBehaviour {
     private KeywordRecognizer _keywordRecognizer = null; 
@@ -22,6 +23,7 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Next", Next);
         _keywords.Add("Go", Next); 
         _keywords.Add("Back", Back);
+        _keywords.Add("Reset", ResetScene);
 
 
         _keywordRecognizer = new KeywordRecognizer(_keywords.Keys.ToArray());
@@ -59,6 +61,11 @@ public class VoiceManager : MonoBehaviour {
         //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_NextMenu); 
         mc.NextTask();
         
+    }
+
+    private void ResetScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void Back()

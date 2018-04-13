@@ -25,7 +25,8 @@ public class MenuController : MonoBehaviour
         m_PreviousMenu = oldMenu;
 
         newMenu.transform.position = oldMenu.transform.position;
-        newMenu.transform.rotation = Quaternion.Euler(new Vector3(newMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, newMenu.transform.eulerAngles.z));
+        newMenu.transform.rotation = oldMenu.transform.rotation;
+        //newMenu.transform.rotation = Quaternion.Euler(new Vector3(newMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, newMenu.transform.eulerAngles.z));
 
         oldMenu.SetActive(false);
         newMenu.SetActive(true);
