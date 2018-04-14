@@ -445,6 +445,9 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\resources.resource">
       <PackagePath>Data\resources.resource</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\Data\sharedassets0.resource">
+      <PackagePath>Data\sharedassets0.resource</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

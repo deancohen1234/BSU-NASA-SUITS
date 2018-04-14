@@ -14,10 +14,18 @@ public class VoiceManager : MonoBehaviour {
 
     public GameObject mainMenu;
     public GameObject menuController;
-    private MenuController mc; 
+    private MenuController mc;
 
-	// Use this for initialization
-	void Start () { 
+    [Header("Audio")]
+    public AudioSource m_Source;
+
+    public AudioClip m_OpenMenu;
+    public AudioClip m_CloseMenu;
+    public AudioClip m_NextButton;
+    public AudioClip m_BackButton;
+
+    // Use this for initialization
+    void Start () { 
         _keywords.Add("Menu", Menu);
         _keywords.Add("Move", Menu); 
         _keywords.Add("Next", Next);
@@ -52,7 +60,10 @@ public class VoiceManager : MonoBehaviour {
 
     private void Menu()
     {
-        ToggleVisibility(mc.m_CurrentMenu); 
+        ToggleVisibility(mc.m_CurrentMenu);
+
+        m_Source.clip = m_OpenMenu;
+        m_Source.Play();
     }
 
     private void Next()
@@ -60,11 +71,17 @@ public class VoiceManager : MonoBehaviour {
 
         //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_NextMenu); 
         mc.NextTask();
-        
+
+        m_Source.clip = m_NextButton;
+        m_Source.Play();
+
     }
 
     private void ResetScene()
     {
+        m_Source.clip = m_CloseMenu;
+        m_Source.Play();
+
         SceneManager.LoadScene(0);
     }
 
@@ -74,6 +91,8 @@ public class VoiceManager : MonoBehaviour {
         //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_NextMenu); 
         mc.PreviousTask();
 
+        m_Source.clip = m_BackButton;
+        m_Source.Play();
     }
 
     private void ToggleVisibility(GameObject holoMenu)
