@@ -1,49 +1,48 @@
 fileFormatVersion: 2
-guid: 1de9d1293db41cb459086b9770f5969d
-timeCreated: 1522964206
+guid: 88acd4f5aeafb9c4db01c07872308048
+timeCreated: 1524780146
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Cube
-    100002: Cube.001
-    100004: Cube.002
-    100006: Cube.003
-    100008: Cube.004
-    100010: Cube.005
-    100012: Cube.006
-    100014: //RootNode
-    400000: Cube
-    400002: Cube.001
-    400004: Cube.002
-    400006: Cube.003
-    400008: Cube.004
-    400010: Cube.005
-    400012: Cube.006
-    400014: //RootNode
+    100000: Button6
+    100002: Button6_001
+    100004: Button6_002
+    100006: Button6_003
+    100008: //RootNode
+    100010: MenuBody
+    100012: MenuScreen
+    400000: Button6
+    400002: Button6_001
+    400004: Button6_002
+    400006: Button6_003
+    400008: //RootNode
+    400010: MenuBody
+    400012: MenuScreen
     2100000: Buttons
-    2100002: Background
-    2300000: Cube
-    2300002: Cube.001
-    2300004: Cube.002
-    2300006: Cube.003
-    2300008: Cube.004
-    2300010: Cube.005
-    2300012: Cube.006
-    3300000: Cube
-    3300002: Cube.001
-    3300004: Cube.002
-    3300006: Cube.003
-    3300008: Cube.004
-    3300010: Cube.005
-    3300012: Cube.006
-    4300000: Cube.006
-    4300002: Cube.005
-    4300004: Cube.004
-    4300006: Cube.003
-    4300008: Cube.002
-    4300010: Cube.001
-    4300012: Cube
+    2100002: Screen
+    2100004: Background
+    2100006: Line
+    2300000: Button6
+    2300002: Button6_001
+    2300004: Button6_002
+    2300006: Button6_003
+    2300008: MenuBody
+    2300010: MenuScreen
+    3300000: Button6
+    3300002: Button6_001
+    3300004: Button6_002
+    3300006: Button6_003
+    3300008: MenuBody
+    3300010: MenuScreen
+    4300000: Button6_003
+    4300002: Button6_002
+    4300004: Button6_001
+    4300006: MenuScreen
+    4300008: Button6
+    4300010: MenuBody
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -74,7 +73,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.25
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -118,7 +117,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

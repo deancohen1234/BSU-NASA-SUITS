@@ -1,55 +1,67 @@
 fileFormatVersion: 2
-guid: 9265214f757bd1a419f317fed9bc3371
-timeCreated: 1522973883
+guid: 460c98543c17c1a42a77e6f30f27e029
+timeCreated: 1525205916
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Button1
-    100002: Button2
-    100004: Button3
-    100006: Button4
-    100008: Button5
-    100010: Button6
-    100012: MenuBody
-    100014: MenuScreen
-    100016: //RootNode
-    400000: Button1
-    400002: Button2
-    400004: Button3
-    400006: Button4
-    400008: Button5
-    400010: Button6
-    400012: MenuBody
-    400014: MenuScreen
-    400016: //RootNode
-    2100000: Screen
-    2100002: Buttons
-    2100004: Background
-    2300000: Button1
-    2300002: Button2
-    2300004: Button3
-    2300006: Button4
-    2300008: Button5
-    2300010: Button6
-    2300012: MenuBody
-    2300014: MenuScreen
-    3300000: Button1
-    3300002: Button2
-    3300004: Button3
-    3300006: Button4
-    3300008: Button5
-    3300010: Button6
-    3300012: MenuBody
-    3300014: MenuScreen
-    4300000: MenuScreen
-    4300002: Button5
-    4300004: Button4
-    4300006: Button6
-    4300008: Button3
-    4300010: Button1
-    4300012: Button2
+    100000: Button6_000
+    100002: Button6_001
+    100004: Button6_002
+    100006: Button6_003
+    100008: Button6_004
+    100010: Button6_005
+    100012: Button6_006
+    100014: Button6_007
+    100016: MenuBody
+    100018: MenuBody_001
+    100020: //RootNode
+    400000: Button6_000
+    400002: Button6_001
+    400004: Button6_002
+    400006: Button6_003
+    400008: Button6_004
+    400010: Button6_005
+    400012: Button6_006
+    400014: Button6_007
+    400016: MenuBody
+    400018: MenuBody_001
+    400020: //RootNode
+    2100000: Buttons
+    2100002: Background
+    2100004: Buttons_001
+    2300000: Button6_000
+    2300002: Button6_001
+    2300004: Button6_002
+    2300006: Button6_003
+    2300008: Button6_004
+    2300010: Button6_005
+    2300012: Button6_006
+    2300014: Button6_007
+    2300016: MenuBody
+    2300018: MenuBody_001
+    3300000: Button6_000
+    3300002: Button6_001
+    3300004: Button6_002
+    3300006: Button6_003
+    3300008: Button6_004
+    3300010: Button6_005
+    3300012: Button6_006
+    3300014: Button6_007
+    3300016: MenuBody
+    3300018: MenuBody_001
+    4300000: Button6_005
+    4300002: Button6_004
+    4300004: MenuBody_001
+    4300006: Button6_003
+    4300008: Button6_002
+    4300010: Button6_000
+    4300012: Button6_001
     4300014: MenuBody
+    4300016: Button6_007
+    4300018: Button6_006
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -80,7 +92,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.25
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -124,7 +136,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

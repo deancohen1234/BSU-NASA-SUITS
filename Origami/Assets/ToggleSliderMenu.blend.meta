@@ -1,55 +1,42 @@
 fileFormatVersion: 2
-guid: 9f0c718a635ad6b4fb0eefcc1593feab
-timeCreated: 1522973952
+guid: a1e45fb535500b54fb975467f566549e
+timeCreated: 1524781547
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Button1
-    100002: Button2
-    100004: Button3
-    100006: Button4
-    100008: Button5
-    100010: Button6
-    100012: MenuBody
-    100014: MenuScreen
-    100016: //RootNode
-    400000: Button1
-    400002: Button2
-    400004: Button3
-    400006: Button4
-    400008: Button5
-    400010: Button6
-    400012: MenuBody
-    400014: MenuScreen
-    400016: //RootNode
-    2100000: Screen
-    2100002: Buttons
+    100000: Button6
+    100002: Button6_001
+    100004: Button6_003
+    100006: MenuBody
+    100008: MenuScreen
+    100010: //RootNode
+    400000: Button6
+    400002: Button6_001
+    400004: Button6_003
+    400006: MenuBody
+    400008: MenuScreen
+    400010: //RootNode
+    2100000: Buttons
+    2100002: Screen
     2100004: Background
-    2300000: Button1
-    2300002: Button2
-    2300004: Button3
-    2300006: Button4
-    2300008: Button5
-    2300010: Button6
-    2300012: MenuBody
-    2300014: MenuScreen
-    3300000: Button1
-    3300002: Button2
-    3300004: Button3
-    3300006: Button4
-    3300008: Button5
-    3300010: Button6
-    3300012: MenuBody
-    3300014: MenuScreen
-    4300000: MenuScreen
-    4300002: Button5
-    4300004: Button4
+    2300000: Button6
+    2300002: Button6_001
+    2300004: Button6_003
+    2300006: MenuBody
+    2300008: MenuScreen
+    3300000: Button6
+    3300002: Button6_001
+    3300004: Button6_003
+    3300006: MenuBody
+    3300008: MenuScreen
+    4300000: Button6_003
+    4300002: Button6_001
+    4300004: MenuScreen
     4300006: Button6
-    4300008: Button3
-    4300010: Button1
-    4300012: Button2
-    4300014: MenuBody
+    4300008: MenuBody
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -80,7 +67,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.25
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -124,7 +111,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

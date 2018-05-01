@@ -24,6 +24,9 @@ public class VoiceManager : MonoBehaviour {
     public AudioClip m_NextButton;
     public AudioClip m_BackButton;
 
+    // this should go away later
+    public GameObject brightMenu; 
+
     // Use this for initialization
     void Start () { 
         _keywords.Add("Menu", Menu);
@@ -32,6 +35,18 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Go", Next); 
         _keywords.Add("Back", Back);
         _keywords.Add("Reset", ResetScene);
+        _keywords.Add("Clear", ResetScene); 
+        _keywords.Add("Increase", Increase);
+        _keywords.Add("Decrease", Decrease);
+        _keywords.Add("Brightness", Brightness); 
+
+        // _keywords.Add("current task", currentTask); 
+        // _keywords.Add("task list", taskList); 
+        // _keywords.Add("biometrics", biometrics); 
+        // _keywords.Add("help", help); 
+        // _keywords.Add("settings", settings); 
+        // _keywords.Add("sos", sos); 
+
 
 
         _keywordRecognizer = new KeywordRecognizer(_keywords.Keys.ToArray());
@@ -95,6 +110,43 @@ public class VoiceManager : MonoBehaviour {
         m_Source.Play();
     }
 
+    private void Increase()
+    {
+        //if (mc.m_CurrentMenu.Equals(GameObject.Find("ToggleSliderMenu")))
+        //{
+        Debug.Log("Increasing"); 
+            GameObject GOlt = GameObject.Find("Point light");
+            Light lt = GOlt.GetComponent < Light > ();
+            if (lt.intensity < 1.4)
+            {
+                lt.intensity += 0.2f;
+                SliderMove sm = mc.m_CurrentMenu.GetComponent < SliderMove > ();
+                sm.Increase(); 
+            }
+        //}
+    }
+
+    private void Decrease()
+    {
+        //if (mc.m_CurrentMenu.Equals(GameObject.Find("ToggleSliderMenu")))
+        //{
+            GameObject GOlt = GameObject.Find("Point light");
+            Light lt = GOlt.GetComponent<Light>();
+            if (lt.intensity > 0.6)
+            {
+                lt.intensity -= 0.2f;
+                SliderMove sm = mc.m_CurrentMenu.GetComponent<SliderMove>();
+                sm.Decrease();
+            }
+        //}
+    }
+
+    private void Brightness()
+    {
+        ToggleVisibility(brightMenu);
+    }
+
+    // Helper functions // 
     private void ToggleVisibility(GameObject holoMenu)
     {
         //var holoMenu = GameObject.Find("SuitsMenuTwo");
