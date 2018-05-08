@@ -458,32 +458,32 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TilemapModule.dll">
       <PackagePath>UnityEngine.TilemapModule.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UNETModule.dll">
+      <PackagePath>UnityEngine.UNETModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UIModule.dll">
+      <PackagePath>UnityEngine.UIModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UIElementsModule.dll">
+      <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.StyleSheetsModule.dll">
+      <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SpriteMaskModule.dll">
+      <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ScreenCaptureModule.dll">
+      <PackagePath>UnityEngine.ScreenCaptureModule.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TextRenderingModule.dll">
       <PackagePath>UnityEngine.TextRenderingModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TerrainPhysicsModule.dll">
       <PackagePath>UnityEngine.TerrainPhysicsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UIElementsModule.dll">
-      <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.TerrainModule.dll">
       <PackagePath>UnityEngine.TerrainModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SpriteMaskModule.dll">
-      <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SharedInternalsModule.dll">
-      <PackagePath>UnityEngine.SharedInternalsModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.StyleSheetsModule.dll">
-      <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SpriteShapeModule.dll">
-      <PackagePath>UnityEngine.SpriteShapeModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UIModule.dll">
-      <PackagePath>UnityEngine.UIModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.VRModule.dll">
       <PackagePath>UnityEngine.VRModule.dll</PackagePath>
@@ -500,8 +500,8 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.WebModule.dll">
       <PackagePath>UnityEngine.WebModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestWWWModule.dll">
-      <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestAudioModule.dll">
+      <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityConnectModule.dll">
       <PackagePath>UnityEngine.UnityConnectModule.dll</PackagePath>
@@ -509,8 +509,8 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityAnalyticsModule.dll">
       <PackagePath>UnityEngine.UnityAnalyticsModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UNETModule.dll">
-      <PackagePath>UnityEngine.UNETModule.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestWWWModule.dll">
+      <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestTextureModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestTextureModule.dll</PackagePath>
@@ -518,8 +518,8 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UnityWebRequestAudioModule.dll">
-      <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.PhysicsModule.dll">
+      <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.CoreModule.dll">
       <PackagePath>UnityEngine.CoreModule.dll</PackagePath>
@@ -539,9 +539,6 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.CrashReportingModule.dll">
       <PackagePath>UnityEngine.CrashReportingModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AssetBundleModule.dll">
-      <PackagePath>UnityEngine.AssetBundleModule.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AccessibilityModule.dll">
       <PackagePath>UnityEngine.AccessibilityModule.dll</PackagePath>
     </AppxPackagedFile>
@@ -557,8 +554,14 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.AIModule.dll">
       <PackagePath>UnityEngine.AIModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.GameCenterModule.dll">
-      <PackagePath>UnityEngine.GameCenterModule.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ParticlesLegacyModule.dll">
+      <PackagePath>UnityEngine.ParticlesLegacyModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.JSONSerializeModule.dll">
+      <PackagePath>UnityEngine.JSONSerializeModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.Physics2DModule.dll">
+      <PackagePath>UnityEngine.Physics2DModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.PerformanceReportingModule.dll">
       <PackagePath>UnityEngine.PerformanceReportingModule.dll</PackagePath>
@@ -566,32 +569,20 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ParticleSystemModule.dll">
       <PackagePath>UnityEngine.ParticleSystemModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ParticlesLegacyModule.dll">
-      <PackagePath>UnityEngine.ParticlesLegacyModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ScreenCaptureModule.dll">
-      <PackagePath>UnityEngine.ScreenCaptureModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.PhysicsModule.dll">
-      <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.Physics2DModule.dll">
-      <PackagePath>UnityEngine.Physics2DModule.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ImageConversionModule.dll">
-      <PackagePath>UnityEngine.ImageConversionModule.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.GridModule.dll">
       <PackagePath>UnityEngine.GridModule.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.JSONSerializeModule.dll">
-      <PackagePath>UnityEngine.JSONSerializeModule.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.GameCenterModule.dll">
+      <PackagePath>UnityEngine.GameCenterModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.InputModule.dll">
       <PackagePath>UnityEngine.InputModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.IMGUIModule.dll">
       <PackagePath>UnityEngine.IMGUIModule.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.ImageConversionModule.dll">
+      <PackagePath>UnityEngine.ImageConversionModule.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.Timeline.dll">
       <PackagePath>UnityEngine.Timeline.dll</PackagePath>
@@ -602,14 +593,8 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.UI.dll">
       <PackagePath>UnityEngine.UI.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.SpatialTracking.dll">
-      <PackagePath>UnityEngine.SpatialTracking.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.HoloLens.dll">
       <PackagePath>UnityEngine.HoloLens.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.StandardEvents.dll">
-      <PackagePath>UnityEngine.StandardEvents.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\BSU-NASA-SUITS\Origami\App\Origami\UnityEngine.Networking.dll">
       <PackagePath>UnityEngine.Networking.dll</PackagePath>

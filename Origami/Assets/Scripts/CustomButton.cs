@@ -10,7 +10,7 @@ public class CustomButton : MonoBehaviour
 
     public void OnSelected ()
     {
-        m_MenuController.ChangeMenu(gameObject.transform.parent.gameObject, m_DestinationMenu);
+        m_MenuController.ChangeMenu(m_DestinationMenu);
     }
 
     public void OnBack()

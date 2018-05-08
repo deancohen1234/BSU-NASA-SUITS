@@ -28,6 +28,10 @@
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
+    <uap:Capability Name="sharedUserCertificates" />
     <uap2:Capability Name="spatialPerception" />
     <DeviceCapability Name="microphone" />
   </Capabilities>
