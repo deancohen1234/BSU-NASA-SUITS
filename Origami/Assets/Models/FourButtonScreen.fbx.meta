@@ -1,49 +1,69 @@
 fileFormatVersion: 2
-guid: 88acd4f5aeafb9c4db01c07872308048
-timeCreated: 1524780146
+guid: 26ec710df4d6b694b8c6ac1c381f25e7
+timeCreated: 1525823327
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Button6
-    100002: Button6_001
-    100004: Button6_002
-    100006: Button6_003
+    100002: Button6.001
+    100004: Button6.002
+    100006: Button6.003
     100008: //RootNode
     100010: MenuBody
     100012: MenuScreen
+    100014: Point
+    100016: Point.001
     400000: Button6
-    400002: Button6_001
-    400004: Button6_002
-    400006: Button6_003
+    400002: Button6.001
+    400004: Button6.002
+    400006: Button6.003
     400008: //RootNode
     400010: MenuBody
     400012: MenuScreen
-    2100000: Buttons
-    2100002: Screen
-    2100004: Background
-    2100006: Line
+    400014: Point
+    400016: Point.001
     2300000: Button6
-    2300002: Button6_001
-    2300004: Button6_002
-    2300006: Button6_003
+    2300002: Button6.001
+    2300004: Button6.002
+    2300006: Button6.003
     2300008: MenuBody
     2300010: MenuScreen
     3300000: Button6
-    3300002: Button6_001
-    3300004: Button6_002
-    3300006: Button6_003
+    3300002: Button6.001
+    3300004: Button6.002
+    3300006: Button6.003
     3300008: MenuBody
     3300010: MenuScreen
-    4300000: Button6_003
-    4300002: Button6_002
-    4300004: Button6_001
+    4300000: Button6.003
+    4300002: Button6.002
+    4300004: Button6.001
     4300006: MenuScreen
     4300008: Button6
     4300010: MenuBody
-    7400000: Default Take
-    9500000: //RootNode
-  externalObjects: {}
+    10800000: Point
+    10800002: Point.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Background
+    second: {fileID: 2100000, guid: 1849ebbad5e94764ea6d7d02d207d968, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttons
+    second: {fileID: 2100000, guid: 312e73baacba7704ca9f3c3d6c1fb003, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Line
+    second: {fileID: 2100000, guid: bd3277414be1bd94595abde9ce9da6c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: ea43c91c25204f2468b563a0dff4c50f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,7 +93,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.25
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -115,7 +135,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
