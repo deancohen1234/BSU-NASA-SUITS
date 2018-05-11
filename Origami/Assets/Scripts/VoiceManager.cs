@@ -32,12 +32,13 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Menu", Menu);
         _keywords.Add("Move", Menu); 
         _keywords.Add("Next", Next);
-        _keywords.Add("Go", Next); 
+       // _keywords.Add("Go", Next); 
         _keywords.Add("Back", Back);
         _keywords.Add("Reset", ResetScene);
         _keywords.Add("Clear", ResetScene); 
         _keywords.Add("Increase", Increase);
         _keywords.Add("Decrease", Decrease);
+        _keywords.Add("Unicorn", TakePhoto); 
 
         // Main Menus 
         _keywords.Add("Main", MainMenu);
@@ -118,6 +119,11 @@ public class VoiceManager : MonoBehaviour {
     private void Volume()
     {
         mc.ChangeMenu(mc.m_volumeMenu);
+    }
+
+    private void TakePhoto()
+    {
+        Photo.S.takePhoto(); 
     }
 
     #endregion

@@ -8,9 +8,14 @@ public class JSONParse : MonoBehaviour {
 
     public string m_JSONString;
     public string url = "http://localhost/api/recent";
+    public string switchUrl = "";
     public const int OBJECTID_LENGTH = 47;
 
-    public Text bioText; 
+    private OutputErrorData m_OutputErrorData;
+
+    public Text bioText;
+    public Text oxygenText;
+    public Text batteryText; 
 
     [Space(10)]
 
@@ -68,6 +73,7 @@ public class JSONParse : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        m_OutputErrorData = FindObjectOfType<OutputErrorData>();
         //StartCoroutine(RunWWW()); 
         //NASADataType jsonObject = JsonUtility.FromJson<NASADataType>(m_JSONString);
         InvokeRepeating("UpdateSystemData", 1, 5);
@@ -76,6 +82,7 @@ public class JSONParse : MonoBehaviour {
     private void UpdateSystemData()
     {
         StartCoroutine(RunWWW());
+        StartCoroutine(RunSwitchWWW());
     }
     
     IEnumerator RunWWW()
@@ -96,14 +103,14 @@ public class JSONParse : MonoBehaviour {
                 bioText.text += www.error; 
             } else 
             {
-                bioText.text = "Connected to server!"; 
-                json = RemoveBrackets(www.downloadHandler.text);
+                bioText.text = "Connected to server!";
+                //json = RemoveBrackets(www.downloadHandler.text);
+                json = www.downloadHandler.text;
             }
 
-            Debug.Log(json);
             NASADataType jsonObject = JsonUtility.FromJson<NASADataType>(json);
 
-            Debug.Log(jsonObject.heart_bpm);
+          //  Debug.Log(jsonObject.heart_bpm);
             string bioString = "";
             bioString += "Heart Rate: " + jsonObject.heart_bpm.ToString() + " bpm\n";
             bioString += "Suit Pressure: " + jsonObject.p_suit.ToString() + " psid\n";
@@ -116,10 +123,46 @@ public class JSONParse : MonoBehaviour {
             bioString += "H20 Liquid Pressure: " + jsonObject.p_h2o_l.ToString() + " psia\n";
             bioString += "Secondary Oxygen Pack Pressure: " + jsonObject.p_sop.ToString() + " psia\n";
             bioString += "Flow Rate of Secondary Oxygen Pack: " + jsonObject.rate_sop.ToString() + " psi\n";
-            bioString += "Time Life Battery: " + jsonObject.t_battery + "\n";
-            bioString += "Time Life Oxygen: " + jsonObject.t_oxygen + "\n";
+            //bioString += "Time Life Battery: " + jsonObject.t_battery + "\n";
+            //bioString += "Time Life Oxygen: " + jsonObject.t_oxygen + "\n";
             bioString += "Time Life Water: " + jsonObject.t_water + "\n"; 
-            bioText.text += bioString; 
+            bioText.text = bioString;
+
+            oxygenText.text = "Oxygen: " + jsonObject.t_oxygen.ToString();
+            batteryText.text = "Battery: " + jsonObject.t_battery.ToString(); 
+        }
+    }
+
+    IEnumerator RunSwitchWWW()
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get(switchUrl))
+        {
+            yield return www.SendWebRequest();
+
+            string json = "";
+            if (www.isNetworkError)
+            {
+                bioText.text = "NETWORK ERROR Not connected to server :(\n";
+                bioText.text += www.error;
+
+            }
+            else if (www.isHttpError)
+            {
+                bioText.text = "HTTP ERROR Not connected to server :( :( :(";
+                bioText.text += www.error;
+            }
+            else
+            {
+                //bioText.text = "Connected to server!";
+                //json = RemoveBrackets(www.downloadHandler.text);
+                json = www.downloadHandler.text;
+
+            }
+
+           // Debug.Log(json);
+            NASADataTypeSwitch jsonObject = JsonUtility.FromJson<NASADataTypeSwitch>(json);
+
+            CheckSuitSwitches(jsonObject);
         }
     }
 
@@ -145,10 +188,23 @@ public class JSONParse : MonoBehaviour {
         if (CheckValueRange(ndt.rate_sop, m_Rate_SOPLow, m_Rate_SOPHigh)) Debug.Log("Rate of SOP is bad, sorry about that");
     }
 
+    private void CheckSuitSwitches(NASADataTypeSwitch ndts)
+    {
+        m_OutputErrorData.ClearText();
+
+        Debug.Log(ndts);
+        if (ndts.h2o_off) m_OutputErrorData.OutputErrorText("H2O is off");
+        if (ndts.sspe == "true") m_OutputErrorData.OutputErrorText("Spacesuit pressure wrong");
+        if (ndts.fan_error) m_OutputErrorData.OutputErrorText("Fan error");
+        if (ndts.vent_error) m_OutputErrorData.OutputErrorText("Vent error");
+        if (ndts.vehicle_power) m_OutputErrorData.OutputErrorText("Vehicle Power Error");
+        if (ndts.o2_off) m_OutputErrorData.OutputErrorText("O2 is off");
+    }
+
     private string CleanUpJSON(string json)
     {
         string newJson = json.Remove(1,OBJECTID_LENGTH);
-        Debug.Log(newJson);
+      //  Debug.Log(newJson);
 
         return newJson;
     }
@@ -168,13 +224,15 @@ public class JSONParse : MonoBehaviour {
         if (value < highRange && value > lowRange)
         {
             b = true;
-            Debug.Log("Value is good. You good my dude, or dudette");
+           // Debug.Log("Value is good. You good my dude, or dudette");
         }
 
         return b;
     }
 }
 
+
+//////////////////////// All telemetry variables are defined here /////////////////////////////////
 [System.Serializable]
 public class NASADataType
 {
@@ -183,12 +241,12 @@ public class NASADataType
     public float p_suit = 0;
     public float p_sub = 0;
     public int t_sub = 0;
-    public int v_fan = 0;
+    public int v_fan = 0;  // fan speed 
     public int p_o2 = 0;
     public float rate_o2 = 0.0f;
     public int cap_battery = 0;
     public int p_h2o_g = 0;
-    public int p_h2o_l = 0;
+    public int p_h2o_l = 0;    // if the delta between _g and _l is more than 3, then water quantity low 
     public int p_sop = 0;
     public float rate_sop = 0.0f;
     public string t_battery = "";
@@ -196,7 +254,23 @@ public class NASADataType
     public string t_water = "";
 }
 
-public class TestClass
+public class NASADataTypeSwitch
 {
-    public string _id;
+    public string create_date = "";
+    public bool sop_on = false;   // SOP 02 ON TIME LF XX:XX   - secondary oxygen system on - meaning primary system is depleted 
+    public string sspe = "";  // SUIT P EMERG    - out of oxygen or regulator is not working 
+    public bool fan_error = false; // FAN SW OFF   - 
+    public bool vent_error = false; // NO VENT FLOW  - <v_fan> rpm  
+    public bool vehicle_power = false; // VEHICLE POWER AVAIL   - you should switch to save suit power 
+    public bool h2o_off = false; // H20 IS OFF  - for cooling inside the suit 
+    public bool o2_off = false;  // O2 IS OFF 
+
+    // BAT VDC LOW / VAT VDC XX.X - if battery is under 15 V 
+
+    // public bool p_sop = false; // SOP P LOW   SOP P <p_sop>  SOP RATE <rate_sop>  
+    // triggered when O2 rate is greater than 10.2 psi/min -  O2 USE HIGH O2 RATE <rate_O2> 
+
+    // public bool low_voltage = false;   // BAT VDC LOW    BAT VDC <t_battery> V 
+
+    // water gas pressure - WATER QUANTITY LOW 
 }
