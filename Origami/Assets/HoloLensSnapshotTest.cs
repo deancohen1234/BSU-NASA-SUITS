@@ -14,8 +14,11 @@ public class HoloLensSnapshotTest : MonoBehaviour
     bool m_CapturingPhoto = false;
     Texture2D m_Texture = null;
 
+    public static HoloLensSnapshotTest m_HoloLensSnapshot;
+
     void Start()
     {
+        m_HoloLensSnapshot = this;
         Initialize();
     }
 
@@ -63,10 +66,22 @@ public class HoloLensSnapshotTest : MonoBehaviour
     void OnTappedEvent2(InteractionSourceKind source, int tapCount, Ray headRay)
     {
         Debug.Log("Capturing Photo: " + m_CapturingPhoto);
-        /*if (m_CapturingPhoto)
+        if (m_CapturingPhoto)
         {
             return;
-        }*/
+        }
+
+        m_CapturingPhoto = true;
+        Debug.Log("Taking picture...");
+        m_PhotoCaptureObj.TakePhotoAsync(OnPhotoCaptured);
+    }
+
+     public void TakePhoto()
+    {
+        if (m_CapturingPhoto)
+        {
+            return;
+        }
 
         m_CapturingPhoto = true;
         Debug.Log("Taking picture...");
@@ -106,9 +121,14 @@ public class HoloLensSnapshotTest : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(-cameraToWorldMatrix.GetColumn(2), cameraToWorldMatrix.GetColumn(1));
 
         m_Canvas.transform.position = position;
-        m_Canvas.transform.rotation = rotation;
+        //m_Canvas.transform.rotation = rotation;
+
+        MenuController menuController = FindObjectOfType<MenuController>();
+        menuController.ChangeMenuNonBlender(m_Canvas);
 
         Debug.Log("Took picture!");
         m_CapturingPhoto = false;
+
+        ServerConnect.S.sendPicture(m_Texture); 
     }
 }

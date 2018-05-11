@@ -44,6 +44,24 @@ public class MenuController : MonoBehaviour
         //newMenu.SetActive(true);
     }
 
+    public void ChangeMenuNonBlender(GameObject newMenu)
+    {
+        GameObject oldMenu = m_CurrentMenu;
+        m_CurrentMenu = newMenu;
+        if (oldMenu != null)
+        {
+            m_PreviousMenu = oldMenu;
+            oldMenu.SetActive(false);
+        }
+
+        newMenu.transform.position = oldMenu.transform.position;
+        newMenu.transform.rotation = oldMenu.transform.rotation;
+        //newMenu.transform.rotation = Quaternion.Euler(new Vector3(newMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, newMenu.transform.eulerAngles.z));
+
+        ToggleVisibilityNonBlender(newMenu);
+        //newMenu.SetActive(true);
+    }
+
     private void ToggleVisibility(GameObject holoMenu)
     {
         if (holoMenu == null) return;
@@ -63,6 +81,32 @@ public class MenuController : MonoBehaviour
         holoMenu.transform.rotation = Quaternion.Euler(new Vector3(holoMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z));
 
         holoMenu.transform.position += new Vector3(0, .125f, 0);
+
+        m_CurrentMenu = holoMenu;
+    }
+
+    private void ToggleVisibilityNonBlender(GameObject holoMenu)
+    {
+        if (holoMenu == null) return;
+
+        if (m_CurrentMenu != null)
+        {
+            m_CurrentMenu.SetActive(false);
+        }
+
+        holoMenu.SetActive(true);
+
+        holoMenu.transform.position =
+            Camera.main.transform.position + (Camera.main.transform.forward);
+
+        Vector3 cameraPos = Camera.main.transform.position;
+
+        holoMenu.transform.rotation = Quaternion.identity;
+
+        holoMenu.transform.position += new Vector3(0, .125f, 0);
+
+        holoMenu.transform.rotation = Quaternion.Euler(new Vector3(holoMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z));
+
 
         m_CurrentMenu = holoMenu;
     }

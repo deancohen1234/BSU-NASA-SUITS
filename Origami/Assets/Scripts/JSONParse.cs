@@ -192,7 +192,7 @@ public class JSONParse : MonoBehaviour {
     {
         m_OutputErrorData.ClearText();
 
-        Debug.Log(ndts);
+        //Debug.Log(ndts);
         if (ndts.h2o_off) m_OutputErrorData.OutputErrorText("H2O is off");
         if (ndts.sspe == "true") m_OutputErrorData.OutputErrorText("Spacesuit pressure wrong");
         if (ndts.fan_error) m_OutputErrorData.OutputErrorText("Fan error");

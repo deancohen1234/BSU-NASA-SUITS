@@ -38,7 +38,7 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Clear", ResetScene); 
         _keywords.Add("Increase", Increase);
         _keywords.Add("Decrease", Decrease);
-        //_keywords.Add("Unicorn", TakePhoto); 
+        _keywords.Add("Unicorn", TakePhoto); 
 
         // Main Menus 
         _keywords.Add("Main", MainMenu);
@@ -78,7 +78,10 @@ public class VoiceManager : MonoBehaviour {
         {
             Menu();
         }
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakePhoto(); 
+        }
         
 
     }
@@ -123,7 +126,7 @@ public class VoiceManager : MonoBehaviour {
 
     private void TakePhoto()
     {
-        Photo.S.takePhoto(); 
+        HoloLensSnapshotTest.m_HoloLensSnapshot.TakePhoto(); 
     }
 
     #endregion
