@@ -38,7 +38,7 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Clear", ResetScene); 
         _keywords.Add("Increase", Increase);
         _keywords.Add("Decrease", Decrease);
-        _keywords.Add("Unicorn", TakePhoto); 
+        //_keywords.Add("Unicorn", TakePhoto); 
 
         // Main Menus 
         _keywords.Add("Main", MainMenu);

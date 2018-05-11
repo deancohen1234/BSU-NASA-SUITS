@@ -15779,12 +15779,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\othm\\Documents\\GitHub\\BSU-NASA-SUITS\\Origami\\App\\Origami\\Origami.csproj",
+      "projectUniqueName": "C:\\Users\\othm\\Documents\\GitHub\\SUITS-Recover\\BSU-NASA-SUITS\\Origami\\App\\Origami\\Origami.csproj",
       "projectName": "Origami",
-      "projectPath": "C:\\Users\\othm\\Documents\\GitHub\\BSU-NASA-SUITS\\Origami\\App\\Origami\\Origami.csproj",
-      "projectJsonPath": "C:\\Users\\othm\\Documents\\GitHub\\BSU-NASA-SUITS\\Origami\\App\\Origami\\project.json",
+      "projectPath": "C:\\Users\\othm\\Documents\\GitHub\\SUITS-Recover\\BSU-NASA-SUITS\\Origami\\App\\Origami\\Origami.csproj",
+      "projectJsonPath": "C:\\Users\\othm\\Documents\\GitHub\\SUITS-Recover\\BSU-NASA-SUITS\\Origami\\App\\Origami\\project.json",
       "packagesPath": "C:\\Users\\othm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\othm\\Documents\\GitHub\\BSU-NASA-SUITS\\Origami\\App\\Origami\\obj\\",
+      "outputPath": "C:\\Users\\othm\\Documents\\GitHub\\SUITS-Recover\\BSU-NASA-SUITS\\Origami\\App\\Origami\\obj\\",
       "projectStyle": "ProjectJson",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"

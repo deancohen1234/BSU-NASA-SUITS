@@ -23,7 +23,7 @@ public class HoloLensSnapshotTest : MonoBehaviour
     {
         m_GestureRecognizer = new GestureRecognizer();
         m_GestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
-        m_GestureRecognizer.TappedEvent += OnTappedEvent;
+        m_GestureRecognizer.TappedEvent += OnTappedEvent2;
         m_GestureRecognizer.StartCapturingGestures();
 
         m_CapturingPhoto = false;
@@ -43,7 +43,7 @@ public class HoloLensSnapshotTest : MonoBehaviour
 
         m_Texture = new Texture2D(selectedResolution.width, selectedResolution.height, TextureFormat.BGRA32, false);
 
-        PhotoCapture.CreateAsync(false, OnCreatedPhotoCaptureObject);
+        PhotoCapture.CreateAsync(true, OnCreatedPhotoCaptureObject);
     }
 
     void OnCreatedPhotoCaptureObject(PhotoCapture captureObject)
@@ -60,12 +60,13 @@ public class HoloLensSnapshotTest : MonoBehaviour
         Debug.Log("Air Tap to take a picture.");
     }
 
-    void OnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+    void OnTappedEvent2(InteractionSourceKind source, int tapCount, Ray headRay)
     {
-        if (m_CapturingPhoto)
+        Debug.Log("Capturing Photo: " + m_CapturingPhoto);
+        /*if (m_CapturingPhoto)
         {
             return;
-        }
+        }*/
 
         m_CapturingPhoto = true;
         Debug.Log("Taking picture...");

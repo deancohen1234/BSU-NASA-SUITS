@@ -654,16 +654,16 @@ PlayerSettings:
       MusicLibrary: False
       Objects3D: False
       PhoneCall: False
-      PicturesLibrary: False
+      PicturesLibrary: True
       PrivateNetworkClientServer: True
       Proximity: False
       RemovableStorage: False
       SharedUserCertificates: True
       SpatialPerception: True
       UserAccountInformation: False
-      VideosLibrary: False
+      VideosLibrary: True
       VoipCall: False
-      WebCam: False
+      WebCam: True
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 

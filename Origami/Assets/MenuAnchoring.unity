@@ -4944,35 +4944,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JSONString: 
-  url: http://321letsjam.com:3000/api/recent
-  switchUrl: http://321letsjam.com:300/api/switches
+  url: http://321letsjam.com/api/recent
+  switchUrl: http://321letsjam.com/api/switches
   bioText: {fileID: 1400558416}
   oxygenText: {fileID: 1034378485}
   batteryText: {fileID: 1268777634}
-  m_HeartRateLow: 0
-  m_HeartRateHigh: 0
-  m_P_SuitLow: 0
-  m_P_SuitHigh: 0
-  m_P_SubLow: 0
-  m_P_SubHigh: 0
-  m_T_SubLow: 0
-  m_T_SubHigh: 0
-  m_V_FanLow: 0
-  m_V_FanHigh: 0
-  m_P_O2Low: 0
-  m_P_O2High: 0
-  m_Rate_O2Low: 0
-  m_Rate_O2High: 0
+  m_HeartRateLow: 85
+  m_HeartRateHigh: 90
+  m_P_SuitLow: 2
+  m_P_SuitHigh: 4
+  m_P_SubLow: 2
+  m_P_SubHigh: 4
+  m_T_SubLow: 3
+  m_T_SubHigh: 6
+  m_V_FanLow: 10000
+  m_V_FanHigh: 40000
+  m_P_O2Low: 750
+  m_P_O2High: 950
+  m_Rate_O2Low: 0.5
+  m_Rate_O2High: 0.1
   m_Cap_BatteryLow: 0
-  m_Cap_BatteryHigh: 0
-  m_P_H2O_GLow: 0
-  m_P_H2O_GHigh: 0
-  m_P_H2O_LLow: 0
-  m_P_H2O_LHigh: 0
-  m_P_SOPLow: 0
-  m_P_SOPHigh: 0
-  m_Rate_SOPLow: 0
-  m_Rate_SOPHigh: 0
+  m_Cap_BatteryHigh: 30
+  m_P_H2O_GLow: 14
+  m_P_H2O_GHigh: 16
+  m_P_H2O_LLow: 14
+  m_P_H2O_LHigh: 16
+  m_P_SOPLow: 750
+  m_P_SOPHigh: 950
+  m_Rate_SOPLow: 0.5
+  m_Rate_SOPHigh: 1
 --- !u!114 &739110213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5151,14 +5151,13 @@ GameObject:
   - component: {fileID: 789639048}
   - component: {fileID: 789639050}
   - component: {fileID: 789639049}
-  - component: {fileID: 789639051}
   m_Layer: 0
   m_Name: Biometrics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &789639048
 Transform:
   m_ObjectHideFlags: 0
@@ -5209,47 +5208,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &789639051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 789639047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de269f49a6bed3849a66fbb98792c8a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JSONString: 
-  url: http://321letsjam.com/api/recent
-  switchUrl: http://321letsjam.com/api/switches
-  bioText: {fileID: 1400558416}
-  oxygenText: {fileID: 0}
-  batteryText: {fileID: 0}
-  m_HeartRateLow: 85
-  m_HeartRateHigh: 90
-  m_P_SuitLow: 2
-  m_P_SuitHigh: 4
-  m_P_SubLow: 2
-  m_P_SubHigh: 4
-  m_T_SubLow: 3
-  m_T_SubHigh: 6
-  m_V_FanLow: 10000
-  m_V_FanHigh: 40000
-  m_P_O2Low: 750
-  m_P_O2High: 950
-  m_Rate_O2Low: 0.5
-  m_Rate_O2High: 0.1
-  m_Cap_BatteryLow: 0
-  m_Cap_BatteryHigh: 30
-  m_P_H2O_GLow: 14
-  m_P_H2O_GHigh: 16
-  m_P_H2O_LLow: 14
-  m_P_H2O_LHigh: 16
-  m_P_SOPLow: 750
-  m_P_SOPHigh: 950
-  m_Rate_SOPLow: 0.5
-  m_Rate_SOPHigh: 1
 --- !u!1 &796853117
 GameObject:
   m_ObjectHideFlags: 0
@@ -6305,6 +6263,46 @@ Transform:
   - {fileID: 14422345}
   m_Father: {fileID: 706365929}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &894828477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 894828479}
+  - component: {fileID: 894828478}
+  m_Layer: 0
+  m_Name: Photo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &894828478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894828477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7401b4807ccdc3943b7b622faa906d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &894828479
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894828477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08039762, y: 1.3861613, z: -8.968594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &901609711
 Prefab:
@@ -12555,6 +12553,46 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1788073406}
+--- !u!1 &1840579689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1840579691}
+  - component: {fileID: 1840579690}
+  m_Layer: 0
+  m_Name: TryingAgain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1840579690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840579689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985c2833726ff3d4088cf76456f1f5b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1840579691
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840579689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08039762, y: 1.3861613, z: -8.968594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1842899165
 Prefab:
   m_ObjectHideFlags: 0
