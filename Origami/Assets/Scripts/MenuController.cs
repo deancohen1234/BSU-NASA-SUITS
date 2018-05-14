@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class MenuController : MonoBehaviour
 {
@@ -10,20 +11,33 @@ public class MenuController : MonoBehaviour
     public GameObject m_CurrentMenu;
     private GameObject m_PreviousMenu;
 
+    public int currentStep; 
+
     public GameObject[] m_TaskListArray;
+    public Text[] m_StepArray;
     public GameObject m_mainMenu;
     public GameObject m_settingsMenu;
     public GameObject m_brightnessMenu;
     public GameObject m_volumeMenu; 
     public GameObject m_sosMenu;
     public GameObject m_helpMenu;
-    public GameObject m_biometricsMenu; 
+    public GameObject m_biometricsMenu;
+
+    public GameObject m_blankTaskMenu;
+    public Text m_stepText;
+    public RawImage m_stepImage;
+    public Text m_stepPrevText;
+    public Text m_stepCurText;
+    public Text m_stepNextText; 
 
     private int m_CurrentTaskIndex = 0;
+
+    public bool taskZoomedIn = false; 
 
     public void Start()
     {
         m_CurrentMenu = m_OGMenu;
+        currentStep = 1; 
     }
     //hide old menu, and switch to new menu
     public void ChangeMenu(GameObject newMenu)
@@ -60,6 +74,26 @@ public class MenuController : MonoBehaviour
 
         ToggleVisibilityNonBlender(newMenu);
         //newMenu.SetActive(true);
+    }
+
+    public void zoomOut()
+    {
+        m_stepImage.gameObject.SetActive(false);
+        m_stepText.gameObject.SetActive(false);
+
+        m_stepPrevText.gameObject.SetActive(true);
+        m_stepNextText.gameObject.SetActive(true);
+        m_stepCurText.gameObject.SetActive(true); 
+    }
+
+    public void zoomIn()
+    {
+        m_stepImage.gameObject.SetActive(true);
+        m_stepText.gameObject.SetActive(true);
+
+        m_stepPrevText.gameObject.SetActive(false);
+        m_stepNextText.gameObject.SetActive(false);
+        m_stepCurText.gameObject.SetActive(false);
     }
 
     private void ToggleVisibility(GameObject holoMenu)

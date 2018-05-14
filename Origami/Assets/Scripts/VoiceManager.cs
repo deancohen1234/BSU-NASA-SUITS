@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; 
 
 public class VoiceManager : MonoBehaviour {
     private KeywordRecognizer _keywordRecognizer = null; 
@@ -49,7 +50,14 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Increase", Increase);
         _keywords.Add("Decrease", Decrease);
         _keywords.Add("Capture", TakePhoto);
-        _keywords.Add("Toggle", Toggle); 
+        _keywords.Add("Toggle", Toggle);
+
+        // Task List 
+        _keywords.Add("Job", generateTaskMenu);
+        _keywords.Add("Proceed", Proceed);
+        _keywords.Add("Regress", Regress);
+        _keywords.Add("ZoomOut", zoomOut);
+        _keywords.Add("ZoomIn", zoomIn); 
 
         #endregion
 
@@ -62,6 +70,64 @@ public class VoiceManager : MonoBehaviour {
         curMenu = null;
 
         mc = FindObjectOfType(typeof(MenuController)) as MenuController;
+    }
+
+    private void zoomOut()
+    {
+        mc.zoomOut(); 
+    }
+
+    private void zoomIn()
+    {
+        mc.zoomIn();
+    }
+
+    private void generateTaskMenu()
+    {
+        mc.ChangeMenu(mc.m_blankTaskMenu);
+        int curStep = mc.currentStep;
+        string curText = TaskManager.S.getText(curStep);
+        Texture2D curImage = TaskManager.S.getImage(curStep);
+
+        mc.m_stepText.text = curText;
+        mc.m_stepPrevText.text = TaskManager.S.getText(curStep - 1);
+        mc.m_stepCurText.text = curText;
+        mc.m_stepNextText.text = TaskManager.S.getText(curStep + 1); 
+
+        mc.m_stepImage.texture = curImage; 
+
+       // GameObject canvas = mc.m_blankTaskMenu.gameObject.transform.GetChild(0).gameObject;
+
+       // GameObject.Instantiate(curText);
+       // curText.transform.parent = canvas.transform; 
+    }
+
+    private void Proceed()
+    {
+        mc.currentStep++;
+        int curStep = mc.currentStep;
+        string curText = TaskManager.S.getText(curStep);
+        Texture2D curImage = TaskManager.S.getImage(curStep);
+
+        mc.m_stepText.text = curText;
+        mc.m_stepPrevText.text = TaskManager.S.getText(curStep - 1);
+        mc.m_stepCurText.text = curText;
+        mc.m_stepNextText.text = TaskManager.S.getText(curStep + 1);
+        mc.m_stepImage.texture = curImage;
+    }
+
+    private void Regress()
+    {
+        mc.currentStep--;
+        int curStep = mc.currentStep;
+        string curText = TaskManager.S.getText(curStep);
+        mc.m_stepPrevText.text = TaskManager.S.getText(curStep - 1);
+        mc.m_stepCurText.text = curText;
+        mc.m_stepNextText.text = TaskManager.S.getText(curStep + 1);
+        Texture2D curImage = TaskManager.S.getImage(curStep);
+
+        mc.m_stepText.text = curText;
+        mc.m_stepImage.texture = curImage;
     }
 
     // For testing only 
@@ -77,7 +143,7 @@ public class VoiceManager : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakePhoto(); 
+            generateTaskMenu(); 
         }
     }
 
