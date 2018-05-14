@@ -23,57 +23,53 @@ public class VoiceManager : MonoBehaviour {
     public AudioClip m_CloseMenu;
     public AudioClip m_NextButton;
     public AudioClip m_BackButton;
-
-    // this should go away later
-    public GameObject brightMenu; 
-
-    // Use this for initialization
-    void Start () { 
-        _keywords.Add("Menu", Menu);
-        _keywords.Add("Move", Menu); 
-        _keywords.Add("Next", Next);
-       // _keywords.Add("Go", Next); 
-        _keywords.Add("Back", Back);
-        _keywords.Add("Reset", ResetScene);
-        _keywords.Add("Clear", ResetScene); 
-        _keywords.Add("Increase", Increase);
-        _keywords.Add("Decrease", Decrease);
-        _keywords.Add("Unicorn", TakePhoto); 
-
-        // Main Menus 
+    
+    void Start () {
+        #region keywords
+        // Menus 
         _keywords.Add("Main", MainMenu);
         _keywords.Add("Settings", Settings);
         _keywords.Add("Brightness", Brightness);
-        _keywords.Add("Volume", Volume); 
+        _keywords.Add("Volume", Volume);
         _keywords.Add("Biometrics", Biometrics);
         _keywords.Add("Houston", Houston);
         _keywords.Add("Help", Help);
-        _keywords.Add("Task", Task); 
+        _keywords.Add("Task", Task);
 
-        // _keywords.Add("current task", currentTask); 
-        // _keywords.Add("task list", taskList); 
-        // _keywords.Add("biometrics", biometrics); 
-        // _keywords.Add("help", help); 
-        // _keywords.Add("settings", settings); 
-        // _keywords.Add("sos", sos); 
+        // Navigation
+        _keywords.Add("Menu", Menu);
+        _keywords.Add("Move", Menu); 
+        _keywords.Add("Next", Next);
+        _keywords.Add("Go", Next); 
+        _keywords.Add("Back", Back);
+        _keywords.Add("Reset", ResetScene);
+        _keywords.Add("Clear", ResetScene); 
 
+        // Special Functions
+        _keywords.Add("Increase", Increase);
+        _keywords.Add("Decrease", Decrease);
+        _keywords.Add("Unicorn", TakePhoto);
 
+        #endregion
 
+        // Keyword recognition 
         _keywordRecognizer = new KeywordRecognizer(_keywords.Keys.ToArray());
         _keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         _keywordRecognizer.Start();
 
+        // Set up MenuController 
         curMenu = null;
 
         mc = FindObjectOfType(typeof(MenuController)) as MenuController;
     }
+
+    // For testing only 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
             MainMenu(); 
         }
-
         if (Input.GetKeyDown(KeyCode.M))
         {
             Menu();
@@ -82,15 +78,13 @@ public class VoiceManager : MonoBehaviour {
         {
             TakePhoto(); 
         }
-        
-
     }
+
     #region Menu Functions
 
     private void MainMenu()
     {
         mc.ChangeMenu(mc.m_mainMenu); 
-        //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_mainMenu); 
     }
 
     public void Settings()
@@ -118,7 +112,6 @@ public class VoiceManager : MonoBehaviour {
         mc.ChangeMenu(mc.m_brightnessMenu);
     }
 
-
     private void Volume()
     {
         mc.ChangeMenu(mc.m_volumeMenu);
@@ -126,7 +119,7 @@ public class VoiceManager : MonoBehaviour {
 
     private void TakePhoto()
     {
-        HoloLensSnapshotTest.m_HoloLensSnapshot.TakePhoto(); 
+       // HoloLensSnapshotTest.m_HoloLensSnapshot.TakePhoto(); 
     }
 
     #endregion
@@ -146,8 +139,6 @@ public class VoiceManager : MonoBehaviour {
 
     private void Next()
     {
-
-        //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_NextMenu); 
         mc.NextTask();
 
         m_Source.clip = m_NextButton;
@@ -165,8 +156,6 @@ public class VoiceManager : MonoBehaviour {
 
     private void Back()
     {
-
-        //mc.ChangeMenu(mc.m_CurrentMenu, mc.m_NextMenu); 
         mc.PreviousTask();
 
         m_Source.clip = m_BackButton;

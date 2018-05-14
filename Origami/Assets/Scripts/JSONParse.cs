@@ -193,7 +193,7 @@ public class JSONParse : MonoBehaviour {
         m_OutputErrorData.ClearText();
 
         //Debug.Log(ndts);
-        if (ndts.h2o_off) m_OutputErrorData.OutputErrorText("H2O is off");
+        if (ndts.h2o_off == "true") m_OutputErrorData.OutputErrorText("H2O is off");
         if (ndts.sspe == "true") m_OutputErrorData.OutputErrorText("Spacesuit pressure wrong");
         if (ndts.fan_error) m_OutputErrorData.OutputErrorText("Fan error");
         if (ndts.vent_error) m_OutputErrorData.OutputErrorText("Vent error");
@@ -262,7 +262,7 @@ public class NASADataTypeSwitch
     public bool fan_error = false; // FAN SW OFF   - 
     public bool vent_error = false; // NO VENT FLOW  - <v_fan> rpm  
     public bool vehicle_power = false; // VEHICLE POWER AVAIL   - you should switch to save suit power 
-    public bool h2o_off = false; // H20 IS OFF  - for cooling inside the suit 
+    public string h2o_off = ""; // H20 IS OFF  - for cooling inside the suit 
     public bool o2_off = false;  // O2 IS OFF 
 
     // BAT VDC LOW / VAT VDC XX.X - if battery is under 15 V 

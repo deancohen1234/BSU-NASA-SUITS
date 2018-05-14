@@ -38,8 +38,20 @@ public class ServerConnect : MonoBehaviour
             Debug.Log("Params " + i + " " + args[i]); 
         }
 
-        Dictionary<System.String, System.Object> d = (Dictionary<System.String, System.Object>)args[0]; 
-      
+        Dictionary<String, object> fromSocket = (Dictionary<String, object>)args[0];
+        Debug.Log(fromSocket["sendtext"]);
+        Debug.Log(fromSocket["image"]);
+        String b64String = (String)fromSocket["image"];
+        Debug.Log(b64String.Length);
+        Debug.Log(b64String.Length - 22);
+        b64String = b64String.Remove(0, 22);
+        Debug.Log(b64String.Length);
+        GameObject the_cube = GameObject.Find("Cube");
+        byte[] b64Bytes = System.Convert.FromBase64String(b64String);
+        Texture2D tx = new Texture2D(1, 1);
+        tx.LoadImage(b64Bytes);
+
+        the_cube.GetComponent<Renderer>().material.mainTexture = tx;
     }
     
     void OnConnect(Socket socket, Packet packet, params object[] args)
@@ -88,4 +100,12 @@ public class ServerConnect : MonoBehaviour
         //mySocket = socketManagerRef.GetSocket(“/ Room - 1);
     }
 
+}
+
+
+[System.Serializable]
+public class FromServerData
+{
+    public String b64String;
+    public String sendText;
 }
