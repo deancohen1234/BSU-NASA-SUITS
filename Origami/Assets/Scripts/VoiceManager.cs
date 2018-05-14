@@ -48,7 +48,8 @@ public class VoiceManager : MonoBehaviour {
         // Special Functions
         _keywords.Add("Increase", Increase);
         _keywords.Add("Decrease", Decrease);
-        _keywords.Add("Unicorn", TakePhoto);
+        _keywords.Add("Capture", TakePhoto);
+        _keywords.Add("Toggle", Toggle); 
 
         #endregion
 
@@ -119,7 +120,7 @@ public class VoiceManager : MonoBehaviour {
 
     private void TakePhoto()
     {
-       // HoloLensSnapshotTest.m_HoloLensSnapshot.TakePhoto(); 
+       HoloLensSnapshotTest.S.TakePhoto(); 
     }
 
     #endregion
@@ -160,6 +161,11 @@ public class VoiceManager : MonoBehaviour {
 
         m_Source.clip = m_BackButton;
         m_Source.Play();
+    }
+
+    private void Toggle()
+    {
+        HoloLensSnapshotTest.S.ToggleImage(); 
     }
 
     private void Increase()

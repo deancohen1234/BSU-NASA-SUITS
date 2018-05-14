@@ -1895,6 +1895,7 @@ RectTransform:
   - {fileID: 1268777633}
   - {fileID: 205839509}
   - {fileID: 1945489479}
+  - {fileID: 667870778}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4777,6 +4778,73 @@ GameObject:
   m_PrefabParentObject: {fileID: 1912810595397714, guid: 997bc319e09960b4392822664b97ef1a,
     type: 2}
   m_PrefabInternal: {fileID: 658625070}
+--- !u!1 &667870777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 667870778}
+  - component: {fileID: 667870780}
+  - component: {fileID: 667870779}
+  m_Layer: 5
+  m_Name: BigImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &667870778
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667870777}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.000115, y: 1.000115, z: 1.000115}
+  m_Children: []
+  m_Father: {fileID: 252957981}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15, y: 3}
+  m_SizeDelta: {x: 350, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &667870779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667870777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &667870780
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667870777}
 --- !u!1 &706365928
 GameObject:
   m_ObjectHideFlags: 0
@@ -6265,46 +6333,6 @@ Transform:
   - {fileID: 14422345}
   m_Father: {fileID: 706365929}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &894828477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 894828479}
-  - component: {fileID: 894828478}
-  m_Layer: 0
-  m_Name: Photo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &894828478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894828477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7401b4807ccdc3943b7b622faa906d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &894828479
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894828477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08039762, y: 1.3861613, z: -8.968594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &901609711
 Prefab:
@@ -12565,7 +12593,7 @@ GameObject:
   - component: {fileID: 1840579691}
   - component: {fileID: 1840579690}
   m_Layer: 0
-  m_Name: TryingAgain
+  m_Name: PhotoCapture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12582,7 +12610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985c2833726ff3d4088cf76456f1f5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RawImage: {fileID: 1945489480}
+  m_RawImageSmall: {fileID: 1945489480}
+  m_RawImageBig: {fileID: 667870779}
 --- !u!4 &1840579691
 Transform:
   m_ObjectHideFlags: 0
@@ -12594,7 +12623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1842899165
 Prefab:
@@ -13227,7 +13256,7 @@ GameObject:
   - component: {fileID: 1945489481}
   - component: {fileID: 1945489480}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: SmallImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13248,7 +13277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 304, y: 144}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945489480
@@ -14224,7 +14253,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 4
+    m_FontSize: 2
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -14235,7 +14264,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "ADELE Commands: \n"
+  m_Text: "Help Menu\r\n\r\nWarning Lights/Messages\r\nReport Error/Warning/Alert
+    to Ground Control\r\nRadio\r\nVideo/Audio feed via Hololens\r\nEmergency - Contact
+    Ground Control\r\nRadio\r\nVideo/Audio feed via Hololens\r\nKeywords\r\n\u201CCapture\u201D
+    - Take Photo\r\n\u201CNext\u201D - Go to next frame\r\n\u201CBack\u201D - Go back
+    a frame\r\n\u201CReset\u201D - Reset Scene\r\n\u201CClear\u201D - Reset Scene\r\n\u201CMain\u201D
+    - Main Menu\r\n\u201CBiometrics\u201D - Biometrics Menu\r\n\u201CSettings\u201D
+    - Settings Menu\r\n\u201CBrightness\u201D - Brightness Menu\r\n\u201CVolume\u201D
+    - Volume Menu\r\n\u201CHouston\u201D - Send Message to Houston Ground Control\r\n\u201CTask\u201D
+    - Task Menu\r\n\u201CMove\u201D - Relocate Current menu\r\nVolume\r\nMain Menu
+    > Settings Menu > Volume Menu > \u201CIncrease\u201D or \u201CDecrease\u201D\r\nBrightness\r\nMain
+    Menu > Settings Menu > Brightness Menu > \u201CIncrease\u201D or \u201CDecrease\u201D\r\n\n"
 --- !u!222 &2091163640
 CanvasRenderer:
   m_ObjectHideFlags: 0

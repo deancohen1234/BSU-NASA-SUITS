@@ -7,8 +7,10 @@ using UnityEngine.UI;
 
 public class HoloLensSnapshotTest : MonoBehaviour
 {
-    public RawImage m_RawImage;
+    public static HoloLensSnapshotTest S; 
 
+    public RawImage m_RawImageSmall;
+    public RawImage m_RawImageBig; 
 
     GestureRecognizer m_GestureRecognizer;
     GameObject m_Canvas = null;
@@ -20,6 +22,7 @@ public class HoloLensSnapshotTest : MonoBehaviour
 
     void Start()
     {
+        S = this; 
         Initialize();
     }
 
@@ -77,7 +80,7 @@ public class HoloLensSnapshotTest : MonoBehaviour
         TakePhoto();
     }
 
-    private void TakePhoto()
+    public void TakePhoto()
     {
         if (m_CapturingPhoto)
         {
@@ -126,11 +129,27 @@ public class HoloLensSnapshotTest : MonoBehaviour
         m_Canvas.transform.rotation = rotation;
         */
 
-        m_RawImage.texture = m_Texture;
+        m_RawImageBig.texture = m_Texture;
+        m_RawImageSmall.texture = m_Texture; 
+       // m_RawImage.SetNativeSize();
         Debug.Log("Took picture!");
         m_CapturingPhoto = false;
     }
+
+    public void ToggleImage()
+    {
+        if (!m_RawImageBig.gameObject.activeInHierarchy)
+        {
+            m_RawImageBig.gameObject.SetActive(true);
+            m_RawImageSmall.gameObject.SetActive(false); 
+        } else
+        {
+            m_RawImageBig.gameObject.SetActive(false);
+            m_RawImageSmall.gameObject.SetActive(true);
+        }
+    }
 }
+
 /*using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
