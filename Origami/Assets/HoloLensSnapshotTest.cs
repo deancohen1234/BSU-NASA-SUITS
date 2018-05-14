@@ -129,11 +129,18 @@ public class HoloLensSnapshotTest : MonoBehaviour
         m_Canvas.transform.rotation = rotation;
         */
 
-        m_RawImageBig.texture = m_Texture;
-        m_RawImageSmall.texture = m_Texture; 
-       // m_RawImage.SetNativeSize();
+        SetImage(m_Texture); 
+        ServerConnect.S.sendPicture(m_Texture);
+        // m_RawImage.SetNativeSize();
         Debug.Log("Took picture!");
         m_CapturingPhoto = false;
+
+    }
+
+    public void SetImage(Texture2D text)
+    {
+        m_RawImageBig.texture = text;
+        m_RawImageSmall.texture = text;
     }
 
     public void ToggleImage()
@@ -147,6 +154,12 @@ public class HoloLensSnapshotTest : MonoBehaviour
             m_RawImageBig.gameObject.SetActive(false);
             m_RawImageSmall.gameObject.SetActive(true);
         }
+    }
+
+    public void ClearImage()
+    {
+        m_RawImageBig.gameObject.SetActive(false);
+        m_RawImageSmall.gameObject.SetActive(false); 
     }
 }
 

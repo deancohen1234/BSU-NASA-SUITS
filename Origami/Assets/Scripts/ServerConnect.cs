@@ -51,7 +51,9 @@ public class ServerConnect : MonoBehaviour
         Texture2D tx = new Texture2D(1, 1);
         tx.LoadImage(b64Bytes);
 
-        the_cube.GetComponent<Renderer>().material.mainTexture = tx;
+        HoloLensSnapshotTest.S.SetImage(tx); 
+
+       // the_cube.GetComponent<Renderer>().material.mainTexture = tx;
     }
     
     void OnConnect(Socket socket, Packet packet, params object[] args)
