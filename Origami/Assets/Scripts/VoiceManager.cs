@@ -64,7 +64,11 @@ public class VoiceManager : MonoBehaviour {
 
         // Tasks 
         _keywords.Add("DisableAlarm", disableAlarm);
-        _keywords.Add("ReroutePower", reroutePower); 
+        _keywords.Add("ReroutePower", reroutePower);
+
+        //Music
+        _keywords.Add("Hello", PlayAdele);
+        _keywords.Add("Stop", StopMusic);
 
         #endregion
 
@@ -172,7 +176,7 @@ public class VoiceManager : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            generateTaskMenu(); 
+            Increase();  
         }
     }
 
@@ -276,8 +280,10 @@ public class VoiceManager : MonoBehaviour {
 
     private void Increase()
     {
-        //if (mc.m_CurrentMenu.Equals(GameObject.Find("ToggleSliderMenu")))
-        //{
+        Debug.Log(mc.m_CurrentMenu);
+        Debug.Log(GameObject.Find("ToggleSliderMenu")); 
+        if (mc.m_CurrentMenu.Equals(GameObject.Find("ToggleSliderMenu")))
+        {
         Debug.Log("Increasing"); 
             GameObject GOlt = GameObject.Find("Point light");
             Light lt = GOlt.GetComponent < Light > ();
@@ -287,13 +293,13 @@ public class VoiceManager : MonoBehaviour {
                 SliderMove sm = mc.m_CurrentMenu.GetComponent < SliderMove > ();
                 sm.Increase(); 
             }
-        //}
+        }
     }
 
     private void Decrease()
     {
-        //if (mc.m_CurrentMenu.Equals(GameObject.Find("ToggleSliderMenu")))
-        //{
+        if (mc.m_CurrentMenu.Equals(GameObject.Find("ToggleSliderMenu")))
+        {
             GameObject GOlt = GameObject.Find("Point light");
             Light lt = GOlt.GetComponent<Light>();
             if (lt.intensity > 0.6)
@@ -302,7 +308,17 @@ public class VoiceManager : MonoBehaviour {
                 SliderMove sm = mc.m_CurrentMenu.GetComponent<SliderMove>();
                 sm.Decrease();
             }
-        //}
+        }
+    }
+
+    private void PlayAdele()
+    {
+        MusicManager.m_Instance.PlayAdele();
+    }
+
+    private void StopMusic()
+    {
+        MusicManager.m_Instance.StopMusic();
     }
 
 
