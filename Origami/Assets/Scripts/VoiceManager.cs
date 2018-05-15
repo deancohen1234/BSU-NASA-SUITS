@@ -35,14 +35,14 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Biometrics", Biometrics);
         _keywords.Add("Houston", Houston);
         _keywords.Add("Help", Help);
-        _keywords.Add("Task", Task);
+      //  _keywords.Add("Task", Task);
 
         // Navigation
         _keywords.Add("Menu", Menu);
         _keywords.Add("Move", Menu); 
-        _keywords.Add("Next", Next);
+       // _keywords.Add("Next", Next);
         _keywords.Add("Go", Next); 
-        _keywords.Add("Back", Back);
+      //  _keywords.Add("Back", Back);
         _keywords.Add("Reset", ResetScene);
         _keywords.Add("Clear", ResetScene); 
 
@@ -53,11 +53,15 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Toggle", Toggle);
 
         // Task List 
-        _keywords.Add("Job", generateTaskMenu);
-        _keywords.Add("Proceed", Proceed);
-        _keywords.Add("Regress", Regress);
+        _keywords.Add("Task", generateTaskMenu);
+        _keywords.Add("Next", Proceed);
+        _keywords.Add("Back", Regress);
         _keywords.Add("ZoomOut", zoomOut);
-        _keywords.Add("ZoomIn", zoomIn); 
+        _keywords.Add("ZoomIn", zoomIn);
+
+        // Tasks 
+        _keywords.Add("DisableAlarm", disableAlarm);
+        _keywords.Add("ReroutePower", reroutePower); 
 
         #endregion
 
@@ -70,6 +74,20 @@ public class VoiceManager : MonoBehaviour {
         curMenu = null;
 
         mc = FindObjectOfType(typeof(MenuController)) as MenuController;
+    }
+
+    private void disableAlarm()
+    {
+        mc.currentTask = 1;
+        mc.currentStep = 1;
+        generateTaskMenu(); 
+    }
+
+    private void reroutePower()
+    {
+        mc.currentTask = 2;
+        mc.currentStep = 1;
+        generateTaskMenu(); 
     }
 
     private void zoomOut()
@@ -85,48 +103,44 @@ public class VoiceManager : MonoBehaviour {
     private void generateTaskMenu()
     {
         mc.ChangeMenu(mc.m_blankTaskMenu);
-        int curStep = mc.currentStep;
-        string curText = TaskManager.S.getText(curStep);
-        Texture2D curImage = TaskManager.S.getImage(curStep);
-
-        mc.m_stepText.text = curText;
-        mc.m_stepPrevText.text = TaskManager.S.getText(curStep - 1);
-        mc.m_stepCurText.text = curText;
-        mc.m_stepNextText.text = TaskManager.S.getText(curStep + 1); 
-
-        mc.m_stepImage.texture = curImage; 
-
-       // GameObject canvas = mc.m_blankTaskMenu.gameObject.transform.GetChild(0).gameObject;
-
-       // GameObject.Instantiate(curText);
-       // curText.transform.parent = canvas.transform; 
+        displayStep(); 
     }
 
     private void Proceed()
     {
         mc.currentStep++;
-        int curStep = mc.currentStep;
-        string curText = TaskManager.S.getText(curStep);
-        Texture2D curImage = TaskManager.S.getImage(curStep);
+        displayStep();
 
-        mc.m_stepText.text = curText;
-        mc.m_stepPrevText.text = TaskManager.S.getText(curStep - 1);
-        mc.m_stepCurText.text = curText;
-        mc.m_stepNextText.text = TaskManager.S.getText(curStep + 1);
-        mc.m_stepImage.texture = curImage;
+        m_Source.clip = m_NextButton;
+        m_Source.Play();
     }
 
     private void Regress()
     {
         mc.currentStep--;
+        displayStep();
+
+        m_Source.clip = m_BackButton;
+        m_Source.Play();
+    }
+
+    private void displayStep()
+    {
         int curStep = mc.currentStep;
-        string curText = TaskManager.S.getText(curStep);
-        mc.m_stepPrevText.text = TaskManager.S.getText(curStep - 1);
-        mc.m_stepCurText.text = curText;
-        mc.m_stepNextText.text = TaskManager.S.getText(curStep + 1);
-        Texture2D curImage = TaskManager.S.getImage(curStep);
+        int curTask = mc.currentTask;
+        
+        string curText = TaskManager.S.getStep(curTask, curStep);
+        string prevText = TaskManager.S.getStep(curTask, curStep - 1);
+        string nextText = TaskManager.S.getStep(curTask, curStep + 1);
 
         mc.m_stepText.text = curText;
+
+        mc.m_stepPrevText.text = prevText; 
+        mc.m_stepCurText.text = curText;
+        mc.m_stepNextText.text = nextText;
+        
+        Texture2D curImage = TaskManager.S.getPic(curTask, curStep);
+
         mc.m_stepImage.texture = curImage;
     }
 

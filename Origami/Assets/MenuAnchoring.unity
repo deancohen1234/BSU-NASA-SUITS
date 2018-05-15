@@ -9950,6 +9950,7 @@ MonoBehaviour:
   m_OGMenu: {fileID: 766632343}
   m_CurrentMenu: {fileID: 0}
   currentStep: 0
+  currentTask: 0
   m_TaskListArray:
   - {fileID: 766632343}
   - {fileID: 410040415}

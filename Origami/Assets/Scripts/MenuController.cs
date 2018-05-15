@@ -11,7 +11,8 @@ public class MenuController : MonoBehaviour
     public GameObject m_CurrentMenu;
     private GameObject m_PreviousMenu;
 
-    public int currentStep; 
+    public int currentStep;
+    public int currentTask; 
 
     public GameObject[] m_TaskListArray;
     public Text[] m_StepArray;
@@ -37,8 +38,10 @@ public class MenuController : MonoBehaviour
     public void Start()
     {
         m_CurrentMenu = m_OGMenu;
-        currentStep = 1; 
+        currentStep = 1;
+        currentTask = 1; 
     }
+
     //hide old menu, and switch to new menu
     public void ChangeMenu(GameObject newMenu)
     {
@@ -55,7 +58,6 @@ public class MenuController : MonoBehaviour
         //newMenu.transform.rotation = Quaternion.Euler(new Vector3(newMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, newMenu.transform.eulerAngles.z));
         
         ToggleVisibility(newMenu); 
-        //newMenu.SetActive(true);
     }
 
     public void ChangeMenuNonBlender(GameObject newMenu)

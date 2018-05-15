@@ -195,10 +195,10 @@ public class JSONParse : MonoBehaviour {
         //Debug.Log(ndts);
         if (ndts.h2o_off == "true") m_OutputErrorData.OutputErrorText("H2O is off");
         if (ndts.sspe == "true") m_OutputErrorData.OutputErrorText("Spacesuit pressure wrong");
-        if (ndts.fan_error) m_OutputErrorData.OutputErrorText("Fan error");
-        if (ndts.vent_error) m_OutputErrorData.OutputErrorText("Vent error");
-        if (ndts.vehicle_power) m_OutputErrorData.OutputErrorText("Vehicle Power Error");
-        if (ndts.o2_off) m_OutputErrorData.OutputErrorText("O2 is off");
+        if (ndts.fan_error == "true") m_OutputErrorData.OutputErrorText("Fan error");
+        if (ndts.vent_error == "true") m_OutputErrorData.OutputErrorText("Vent error");
+        if (ndts.vehicle_power == "true") m_OutputErrorData.OutputErrorText("Vehicle Power Error");
+        if (ndts.o2_off == "true") m_OutputErrorData.OutputErrorText("O2 is off");
     }
 
     private string CleanUpJSON(string json)
@@ -257,13 +257,13 @@ public class NASADataType
 public class NASADataTypeSwitch
 {
     public string create_date = "";
-    public bool sop_on = false;   // SOP 02 ON TIME LF XX:XX   - secondary oxygen system on - meaning primary system is depleted 
+    public string sop_on = "";   // SOP 02 ON TIME LF XX:XX   - secondary oxygen system on - meaning primary system is depleted 
     public string sspe = "";  // SUIT P EMERG    - out of oxygen or regulator is not working 
-    public bool fan_error = false; // FAN SW OFF   - 
-    public bool vent_error = false; // NO VENT FLOW  - <v_fan> rpm  
-    public bool vehicle_power = false; // VEHICLE POWER AVAIL   - you should switch to save suit power 
+    public string fan_error = ""; // FAN SW OFF   - 
+    public string vent_error = ""; // NO VENT FLOW  - <v_fan> rpm  
+    public string vehicle_power = ""; // VEHICLE POWER AVAIL   - you should switch to save suit power 
     public string h2o_off = ""; // H20 IS OFF  - for cooling inside the suit 
-    public bool o2_off = false;  // O2 IS OFF 
+    public string o2_off = "";  // O2 IS OFF 
 
     // BAT VDC LOW / VAT VDC XX.X - if battery is under 15 V 
 
