@@ -172,7 +172,7 @@ namespace BestHTTP
                     {
                         Close();
 #if NETFX_CORE
-                        await Task.Delay(100);
+                        //await Task.Delay(100);
 #else
                         Thread.Sleep(100);
 #endif

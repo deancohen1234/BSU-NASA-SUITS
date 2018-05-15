@@ -156,7 +156,7 @@ namespace BestHTTP
                     HTTPManager.OnUpdate();
 
 #if NETFX_CORE
-	                await Task.Delay(ThreadFrequencyInMS);
+	                //await Task.Delay(ThreadFrequencyInMS);
 #else
                     System.Threading.Thread.Sleep(ThreadFrequencyInMS);
 #endif
