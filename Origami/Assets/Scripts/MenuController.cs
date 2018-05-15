@@ -23,6 +23,7 @@ public class MenuController : MonoBehaviour
     public GameObject m_sosMenu;
     public GameObject m_helpMenu;
     public GameObject m_biometricsMenu;
+    public GameObject m_taskList; 
 
     public GameObject m_blankTaskMenu;
     public Text m_stepText;
@@ -34,7 +35,12 @@ public class MenuController : MonoBehaviour
 
     private int m_CurrentTaskIndex = 0;
 
-    public bool taskZoomedIn = false; 
+    public bool taskZoomedIn = false;
+
+    [Header("Audio")]
+    public AudioSource m_Source;
+
+    public AudioClip m_changeMenuSound; 
 
     public void Start()
     {
@@ -58,7 +64,10 @@ public class MenuController : MonoBehaviour
         newMenu.transform.rotation = oldMenu.transform.rotation;
         //newMenu.transform.rotation = Quaternion.Euler(new Vector3(newMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, newMenu.transform.eulerAngles.z));
         
-        ToggleVisibility(newMenu); 
+        ToggleVisibility(newMenu);
+
+        m_Source.clip = m_changeMenuSound;
+        m_Source.Play();
     }
 
     public void ChangeMenuNonBlender(GameObject newMenu)

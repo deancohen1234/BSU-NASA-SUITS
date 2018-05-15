@@ -22,8 +22,11 @@ public class VoiceManager : MonoBehaviour {
 
     public AudioClip m_OpenMenu;
     public AudioClip m_CloseMenu;
+    public AudioClip m_ChangeMenu; 
     public AudioClip m_NextButton;
     public AudioClip m_BackButton;
+    public AudioClip m_ZoomIn;
+    public AudioClip m_ZoomOut; 
     
     void Start () {
         #region keywords
@@ -35,7 +38,7 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Biometrics", Biometrics);
         _keywords.Add("Houston", Houston);
         _keywords.Add("Help", Help);
-      //  _keywords.Add("Task", Task);
+        _keywords.Add("TaskList", TaskList);
 
         // Navigation
         _keywords.Add("Menu", Menu);
@@ -92,12 +95,18 @@ public class VoiceManager : MonoBehaviour {
 
     private void zoomOut()
     {
-        mc.zoomOut(); 
+        mc.zoomOut();
+
+        m_Source.clip = m_ZoomOut;
+        m_Source.Play();
     }
 
     private void zoomIn()
     {
         mc.zoomIn();
+
+        m_Source.clip = m_ZoomIn;
+        m_Source.Play();
     }
 
     private void generateTaskMenu()
@@ -204,9 +213,17 @@ public class VoiceManager : MonoBehaviour {
         mc.ChangeMenu(mc.m_volumeMenu);
     }
 
+    private void TaskList()
+    {
+        mc.ChangeMenu(mc.m_taskList);  
+    }
+
     private void TakePhoto()
     {
-       HoloLensSnapshotTest.S.TakePhoto(); 
+       HoloLensSnapshotTest.S.TakePhoto();
+
+        m_Source.clip = m_ZoomOut;
+        m_Source.Play();
     }
 
     #endregion
@@ -251,7 +268,10 @@ public class VoiceManager : MonoBehaviour {
 
     private void Toggle()
     {
-        HoloLensSnapshotTest.S.ToggleImage(); 
+        HoloLensSnapshotTest.S.ToggleImage();
+
+        m_Source.clip = m_ZoomIn;
+        m_Source.Play();
     }
 
     private void Increase()

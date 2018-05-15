@@ -19,13 +19,13 @@ public class SliderMove : MonoBehaviour {
     public void Increase()
     {
         Debug.Log("Before x: " + slider.transform.position.x); 
-        Move(interval);
+        Move(-interval);
         Debug.Log("After x: " + slider.transform.position.x); 
     }
 
     public void Decrease()
     {
-        Move(-interval); 
+        Move(interval); 
     }
 
     private void Move(float distance)

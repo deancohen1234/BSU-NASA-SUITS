@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Menus
+    uniqueID: 2265695257
+    locked: 0
+  - name: UI
+    uniqueID: 3550248291
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
