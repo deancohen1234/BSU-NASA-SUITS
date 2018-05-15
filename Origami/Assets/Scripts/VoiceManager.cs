@@ -103,7 +103,10 @@ public class VoiceManager : MonoBehaviour {
     private void generateTaskMenu()
     {
         mc.ChangeMenu(mc.m_blankTaskMenu);
-        displayStep(); 
+        displayStep();
+
+        m_Source.clip = m_OpenMenu;
+        m_Source.Play();
     }
 
     private void Proceed()
@@ -142,6 +145,9 @@ public class VoiceManager : MonoBehaviour {
         Texture2D curImage = TaskManager.S.getPic(curTask, curStep);
 
         mc.m_stepImage.texture = curImage;
+
+        string warningText = TaskManager.S.getWarning(curTask, curStep);
+        mc.m_warningText.text = warningText; 
     }
 
     // For testing only 

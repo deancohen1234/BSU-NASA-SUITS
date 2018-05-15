@@ -43,11 +43,24 @@ public class TaskManager : MonoBehaviour {
         {
             retval = allTasks[task - 1][step - 1].picture;
         }
-        catch (IndexOutOfRangeException)
+        catch (ArgumentOutOfRangeException)
         {
             retval = null;
         }
         return retval;
+    }
+
+    public string getWarning(int task, int step)
+    {
+        string retval; 
+        try
+        {
+            retval = allTasks[task - 1][step - 1].warning; 
+        } catch (ArgumentOutOfRangeException)
+        {
+            retval = ""; 
+        }
+        return retval; 
     }
 
     private void populateTasks()

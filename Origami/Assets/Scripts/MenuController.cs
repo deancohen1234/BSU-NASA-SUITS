@@ -29,7 +29,8 @@ public class MenuController : MonoBehaviour
     public RawImage m_stepImage;
     public Text m_stepPrevText;
     public Text m_stepCurText;
-    public Text m_stepNextText; 
+    public Text m_stepNextText;
+    public Text m_warningText; 
 
     private int m_CurrentTaskIndex = 0;
 
@@ -82,6 +83,7 @@ public class MenuController : MonoBehaviour
     {
         m_stepImage.gameObject.SetActive(false);
         m_stepText.gameObject.SetActive(false);
+        m_warningText.gameObject.SetActive(false); 
 
         m_stepPrevText.gameObject.SetActive(true);
         m_stepNextText.gameObject.SetActive(true);
@@ -92,6 +94,7 @@ public class MenuController : MonoBehaviour
     {
         m_stepImage.gameObject.SetActive(true);
         m_stepText.gameObject.SetActive(true);
+        m_warningText.gameObject.SetActive(true);
 
         m_stepPrevText.gameObject.SetActive(false);
         m_stepNextText.gameObject.SetActive(false);
