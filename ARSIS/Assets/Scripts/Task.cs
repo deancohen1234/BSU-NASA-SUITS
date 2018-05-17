@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Object representing a single step in a procedure. 
+/// Includes the text of the step, a picture (may be null if no picture), and an optional warning. 
+/// 
+/// NOTE: BestHTTP may create a line about this object that causes a compile error. 
+///       This line can safely be commented out to allow compilation. 
+/// </summary>
 public class Task {
 
     private string m_task;

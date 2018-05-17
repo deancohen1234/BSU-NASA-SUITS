@@ -6,6 +6,11 @@ using BestHTTP.SocketIO;
 using System;
 using UnityEngine.UI;
 
+/// <summary>
+/// Handles socket.io connection with picture server 
+/// Current web address to view, draw on, and send back pictures: http://321letsjam.com:3000/public
+/// Socket connection URI denoted on line 89
+/// </summary>
 public class ServerConnect : MonoBehaviour
 {
     // Singleton 
@@ -21,11 +26,13 @@ public class ServerConnect : MonoBehaviour
         S = this; 
 
         CreateSocketRef();
-        socketManager.Socket.On("connect", OnConnect);
 
+        // Socket messages that we are listening for 
+        socketManager.Socket.On("connect", OnConnect);
         socketManager.Socket.On("picture", getPicture); 
     }
 
+    ////////////////////// Public functions that emit socket messages ////////////////////////////
     public void sendPicture(Texture2D tx)
     {
         socketManager.GetSocket().Emit("pictureFromHolo", tx.EncodeToPNG()); 
@@ -36,40 +43,33 @@ public class ServerConnect : MonoBehaviour
         socketManager.GetSocket().Emit("SOS"); 
     }
 
+    ///////////////////// Handlers for recieved socket messages //////////////////////////////////
     void getPicture(Socket socket, Packet packet, params object[] args)
     {
-        Debug.Log("We got a picture");
-        for (int i = 0; i < args.Length; i++)
-        {
-            Debug.Log("Params " + i + " " + args[i]); 
-        }
-
+        // Convert picture to correct format 
         Dictionary<String, object> fromSocket = (Dictionary<String, object>)args[0];
-        Debug.Log(fromSocket["sendtext"]);
-        Debug.Log(fromSocket["image"]);
         String b64String = (String)fromSocket["image"];
-        Debug.Log(b64String.Length);
-        Debug.Log(b64String.Length - 22);
-        b64String = b64String.Remove(0, 22);
-        Debug.Log(b64String.Length);
-        GameObject the_cube = GameObject.Find("Cube");
+        b64String = b64String.Remove(0, 22);  // removes the header 
         byte[] b64Bytes = System.Convert.FromBase64String(b64String);
         Texture2D tx = new Texture2D(1, 1);
         tx.LoadImage(b64Bytes);
 
+        // Display picture and text 
         HoloLensSnapshotTest.S.SetImage(tx);
         HoloLensSnapshotTest.S.SetText(fromSocket["sendtext"].ToString());
 
+        // Play sound 
         VoiceManager vm = (VoiceManager)GameObject.FindObjectOfType(typeof(VoiceManager));
         vm.m_Source.clip = m_messageRecievedAudio;
         vm.m_Source.Play(); 
     }
-    
+
     void OnConnect(Socket socket, Packet packet, params object[] args)
     {
-      // Debug.Log("Connected to server");
+        // Debug.Log("Connected to server");
     }
 
+    /////////////////////////////// Socket.io connection utilities /////////////////////////////////
     void OnApplicationQuit()
     {
         LeaveRoomFromServer();
@@ -78,7 +78,6 @@ public class ServerConnect : MonoBehaviour
 
     public void CreateSocketRef()
     {
-        //Debug.Log("Trying to connect"); 
         TimeSpan miliSecForReconnect = TimeSpan.FromMilliseconds(1000);
 
         options = new SocketOptions();

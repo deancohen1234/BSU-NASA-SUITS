@@ -6,16 +6,19 @@ using UnityEngine.Windows.Speech;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI; 
 
+/// <summary>
+/// Manages all ADELE voice commands. 
+/// </summary>
 public class VoiceManager : MonoBehaviour {
     private KeywordRecognizer _keywordRecognizer = null; 
     private readonly Dictionary<string, System.Action> _keywords = new Dictionary<string, System.Action>();
     private bool _visible = false;
-
-    public GameObject curMenu; 
-
-    public GameObject mainMenu;
-    public GameObject menuController;
+    
     private MenuController mc;
+
+    // Needed to check which settings menu is open for slider function 
+    public GameObject m_brightnessMenu;
+    public GameObject m_volumeMenu;
 
     [Header("Audio")]
     public AudioSource m_Source;
@@ -29,9 +32,6 @@ public class VoiceManager : MonoBehaviour {
     public AudioClip m_ZoomIn;
     public AudioClip m_ZoomOut;
     public AudioClip m_SliderSound; 
-
-    public GameObject m_brightnessMenu;
-    public GameObject m_volumeMenu; 
     
     void Start () {
         #region keywords
@@ -50,7 +50,8 @@ public class VoiceManager : MonoBehaviour {
         _keywords.Add("Adele Menu", Menu);
         _keywords.Add("Adele Move", Menu); 
         _keywords.Add("Adele Reset", ResetScene);
-        _keywords.Add("Adele Clear", ResetScene); 
+        _keywords.Add("Adele Clear", ResetScene);
+        _keywords.Add("Adele Previous", Previous); 
 
         // Special Functions
         _keywords.Add("Increase", Increase);
@@ -60,8 +61,8 @@ public class VoiceManager : MonoBehaviour {
 
         // Task List 
         _keywords.Add("Adele Task", generateTaskMenu);
-        _keywords.Add("Next", Proceed);
-        _keywords.Add("Back", Regress);
+        _keywords.Add("Next", Next);
+        _keywords.Add("Back", Back);
         _keywords.Add("Zoom Out", zoomOut);
         _keywords.Add("Zoom In", zoomIn);
 
@@ -83,14 +84,12 @@ public class VoiceManager : MonoBehaviour {
 
         #endregion
 
-        // Keyword recognition 
+        // Sets up keyword recognition 
         _keywordRecognizer = new KeywordRecognizer(_keywords.Keys.ToArray());
         _keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         _keywordRecognizer.Start();
 
-        // Set up MenuController 
-        curMenu = null;
-
+        // Initializes menu controller 
         mc = FindObjectOfType(typeof(MenuController)) as MenuController;
     }
 
@@ -161,6 +160,11 @@ public class VoiceManager : MonoBehaviour {
         m_Source.Play();
 
         SceneManager.LoadScene(0);
+    }
+
+    private void Previous()
+    {
+        mc.GoBack(); 
     }
 
     #endregion
@@ -261,7 +265,7 @@ public class VoiceManager : MonoBehaviour {
         m_Source.Play();
     }
 
-    private void Proceed()
+    private void Next()
     {
         mc.currentStep++;
         displayStep();
@@ -270,7 +274,7 @@ public class VoiceManager : MonoBehaviour {
         m_Source.Play();
     }
 
-    private void Regress()
+    private void Back()
     {
         mc.currentStep--;
         displayStep();
@@ -395,23 +399,6 @@ public class VoiceManager : MonoBehaviour {
         if (_keywords.TryGetValue(args.text, out keywordAction))
         {
             keywordAction.Invoke(); 
-        }
-    }
-
-    // For testing only 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            MainMenu();
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            Menu();
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Increase();
         }
     }
 }

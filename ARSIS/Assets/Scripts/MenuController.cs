@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
 
+/// <summary>
+/// Controls all displaying of menus. 
+/// </summary>
 public class MenuController : MonoBehaviour
 {
+    // Default menu; set as current menu on initialization 
     public GameObject m_OGMenu;
-    //public GameObject m_NextMenu;
 
     public GameObject m_CurrentMenu;
     private GameObject m_PreviousMenu;
 
+    // Variables to keep track of your place in the procedure  
     public int currentStep;
     public int currentTask; 
-
-    public GameObject[] m_TaskListArray;
-    public Text[] m_StepArray;
+    
+    // Menus 
+    [Header("Set Menus Here")]
     public GameObject m_mainMenu;
     public GameObject m_settingsMenu;
     public GameObject m_brightnessMenu;
@@ -27,6 +31,8 @@ public class MenuController : MonoBehaviour
     public GameObject m_musicMenu;
 
     public GameObject m_blankTaskMenu;
+
+    // Elements of task menu (procedurally populated) 
     public Text m_stepText;
     public RawImage m_stepImage;
     public Text m_stepPrevText;
@@ -34,13 +40,10 @@ public class MenuController : MonoBehaviour
     public Text m_stepNextText;
     public Text m_warningText; 
 
-    private int m_CurrentTaskIndex = 0;
-
     public bool taskZoomedIn = false;
 
     [Header("Audio")]
     public AudioSource m_Source;
-
     public AudioClip m_changeMenuSound; 
 
     public void Start()
@@ -61,34 +64,19 @@ public class MenuController : MonoBehaviour
             oldMenu.SetActive(false); 
         }
        
+        // Set position and rotation of the new menu to be the same as the previous menu 
         newMenu.transform.position = oldMenu.transform.position;
         newMenu.transform.rotation = oldMenu.transform.rotation;
-        //newMenu.transform.rotation = Quaternion.Euler(new Vector3(newMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, newMenu.transform.eulerAngles.z));
         
+        // Make the new menu visible 
         ToggleVisibility(newMenu);
 
+        // Play sound 
         m_Source.clip = m_changeMenuSound;
         m_Source.Play();
     }
 
-    public void ChangeMenuNonBlender(GameObject newMenu)
-    {
-        GameObject oldMenu = m_CurrentMenu;
-        m_CurrentMenu = newMenu;
-        if (oldMenu != null)
-        {
-            m_PreviousMenu = oldMenu;
-            oldMenu.SetActive(false);
-        }
-
-        newMenu.transform.position = oldMenu.transform.position;
-        newMenu.transform.rotation = oldMenu.transform.rotation;
-        //newMenu.transform.rotation = Quaternion.Euler(new Vector3(newMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, newMenu.transform.eulerAngles.z));
-
-        ToggleVisibilityNonBlender(newMenu);
-        //newMenu.SetActive(true);
-    }
-
+    // Zoom out of task menu 
     public void zoomOut()
     {
         m_stepImage.gameObject.SetActive(false);
@@ -100,6 +88,7 @@ public class MenuController : MonoBehaviour
         m_stepCurText.gameObject.SetActive(true); 
     }
 
+    // Zoom in to task menu 
     public void zoomIn()
     {
         m_stepImage.gameObject.SetActive(true);
@@ -127,41 +116,12 @@ public class MenuController : MonoBehaviour
 
         Vector3 cameraPos = Camera.main.transform.position;
 
-
-        //holoMenu.transform.rotation = Quaternion.Euler(new Vector3(holoMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z));
-
         holoMenu.transform.position += new Vector3(0, .125f, 0);
 
         Quaternion q = Quaternion.LookRotation(holoMenu.transform.position - Camera.main.transform.position, Camera.main.transform.up);
 
         holoMenu.transform.rotation = q;
         holoMenu.transform.rotation = Quaternion.Euler(holoMenu.transform.eulerAngles.x + 90, holoMenu.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z);
-
-        m_CurrentMenu = holoMenu;
-    }
-
-    private void ToggleVisibilityNonBlender(GameObject holoMenu)
-    {
-        if (holoMenu == null) return;
-
-        if (m_CurrentMenu != null)
-        {
-            m_CurrentMenu.SetActive(false);
-        }
-
-        holoMenu.SetActive(true);
-
-        holoMenu.transform.position =
-            Camera.main.transform.position + (Camera.main.transform.forward);
-
-        Vector3 cameraPos = Camera.main.transform.position;
-
-        holoMenu.transform.rotation = Quaternion.identity;
-
-        holoMenu.transform.position += new Vector3(0, .125f, 0);
-
-        holoMenu.transform.rotation = Quaternion.Euler(new Vector3(holoMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z));
-
 
         m_CurrentMenu = holoMenu;
     }
@@ -174,32 +134,5 @@ public class MenuController : MonoBehaviour
 
         m_CurrentMenu.SetActive(false);
         m_PreviousMenu.SetActive(true);
-    }
-
-    public void NextTask()
-    {
-        ChangeMenu(m_TaskListArray[m_CurrentTaskIndex + 1]);
-
-        m_CurrentTaskIndex++;
-
-    }
-
-    public void PreviousTask()
-    {
-        ChangeMenu(m_TaskListArray[m_CurrentTaskIndex - 1]);
-
-        m_CurrentTaskIndex--;
-    }
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //ChangeMenu(m_OGMenu, m_NextMenu);
-        }
-        else if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            GoBack();
-        }
     }
 }

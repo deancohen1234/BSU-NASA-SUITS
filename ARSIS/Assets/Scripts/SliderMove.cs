@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls movement of slider objects. 
+/// </summary>
 public class SliderMove : MonoBehaviour {
+    // The slider to be moved 
     public GameObject slider;
 
+    // Movement parameters 
     public float minPosX = 0f;
-    public float maxPosX = 0.3f;
-
+    public float maxPosX = 0.3f; 
     private float interval = 0.04f; 
 
     public void Increase()
     {
-        Debug.Log("Before x: " + slider.transform.position.x); 
         Move(-interval);
-        Debug.Log("After x: " + slider.transform.position.x); 
     }
 
     public void Decrease()

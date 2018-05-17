@@ -5,10 +5,18 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.Networking;
 
+/// <summary>
+/// Manages all tasks. Tasks are currently hard-coded in; however, we are working on a solution to pull them from a server. 
+/// </summary>
 public class TaskManager : MonoBehaviour {
 
-    // List of Tasks
+    // Singleton 
+    public static TaskManager S;
+
+    // List of all steps organized by procedure 
     public List<List<Task>> allTasks = new List<List<Task>>(); 
+
+    // Lists of individual steps 
     public List<Task> disabAlarm = new List<Task>(); 
     public List<Task> reroutPower = new List<Task>();
     public List<Task> lightSwitch = new List<Task>(); 
@@ -16,14 +24,12 @@ public class TaskManager : MonoBehaviour {
     // Static Array of images for each task 
     public Texture2D[] images; 
 
-    // Singleton 
-    public static TaskManager S;
-
     // Web Connection 
     public string url = "";
     private OutputErrorData m_OutputErrorData;
 
-    public GameObject cube; 
+    // For testing 
+    //public GameObject cube; 
 
     void Start () {
         S = this; 
@@ -144,7 +150,7 @@ public class TaskManager : MonoBehaviour {
             Texture2D tx = new Texture2D(1, 1);
             tx.LoadImage(rawImage);
 
-            cube.GetComponent<Renderer>().material.mainTexture = tx; 
+            //cube.GetComponent<Renderer>().material.mainTexture = tx; 
         }
     }
 
@@ -169,7 +175,8 @@ public class TaskManager : MonoBehaviour {
                }  */
 
 
-            private void populateTasks()
+     // Staticly creates all tasks 
+    private void populateTasks()
     {
         disabAlarm.Add(new Task("1. On the RIGHT side of the EVA kit, locate and use the PANEL ACCESS KEY to unlock the PANEL ACCESS DOOR LOCKS.", images[0], "CAUTION: The keys are on the tension-spring cable."));
         disabAlarm.Add(new Task("2. Carefully return keys to the side of the EVA kit.", null, null));
@@ -250,6 +257,7 @@ public class TaskManager : MonoBehaviour {
     }
 }
 
+// Used for parsing JSON from server 
 [System.Serializable]
 public class Step
 {

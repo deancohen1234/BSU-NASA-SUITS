@@ -5,16 +5,28 @@ using UnityEngine.XR.WSA.WebCam;
 using UnityEngine.XR.WSA.Input;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class takes pictures from the HoloLens camera. 
+/// NOTE: Using HoloLens live stream from the camera may interfere with 
+///       this class. If you need to record or live stream from the 
+///       HoloLens while using the capture functionality, make sure 
+///       that you are only accessing holograms and not the camera. 
+///       
+/// Code modified from the following link: https://forum.unity.com/threads/holographic-photo-blending-with-photocapture.416023/
+/// </summary>
 public class HoloLensSnapshotTest : MonoBehaviour
 {
-    public static HoloLensSnapshotTest S; 
+    // Singleton 
+    public static HoloLensSnapshotTest S;
 
+    // GameObjects where images and text are displayed 
+    [Header("Image Display Objects")]
     public RawImage m_RawImageSmall;
     public RawImage m_RawImageBig;
     public Text m_sendTextSmall;
     public Text m_sendTextBig; 
 
-    GestureRecognizer m_GestureRecognizer;
+    // Photo Capture objects 
     GameObject m_Canvas = null;
     Renderer m_CanvasRenderer = null;
     PhotoCapture m_PhotoCaptureObj;
@@ -25,12 +37,16 @@ public class HoloLensSnapshotTest : MonoBehaviour
     void Start()
     {
         S = this; 
-        Initialize();
     }
 
-    void Initialize()
+    public void TakePhoto()
     {
-        Debug.Log("Initializing...");
+        InitializeCamera();
+    }
+
+    //Set up camera and take a photo 
+    void InitializeCamera()
+    {
         List<Resolution> resolutions = new List<Resolution>(PhotoCapture.SupportedResolutions);
         Resolution selectedResolution = resolutions[0];
 
@@ -42,7 +58,7 @@ public class HoloLensSnapshotTest : MonoBehaviour
 
         m_Texture = new Texture2D(selectedResolution.width, selectedResolution.height, TextureFormat.BGRA32, false);
 
-        PhotoCapture.CreateAsync(false, OnCreatedPhotoCaptureObject);
+        PhotoCapture.CreateAsync(false, OnCreatedPhotoCaptureObject); 
     }
 
     void OnCreatedPhotoCaptureObject(PhotoCapture captureObject)
@@ -53,55 +69,54 @@ public class HoloLensSnapshotTest : MonoBehaviour
 
     void OnStartPhotoMode(PhotoCapture.PhotoCaptureResult result)
     {
-        SetupGestureRecognizer();
-
-        Debug.Log("Camera Ready!");
-    }
-
-    public void TakePhoto()
-    {
+        // Prevents us from taking two photos at the same time 
         if (m_CapturingPhoto)
         {
             return;
         }
 
         m_CapturingPhoto = true;
-        Debug.Log("Taking picture...");
         m_PhotoCaptureObj.TakePhotoAsync(OnPhotoCaptured);
     }
 
     void OnPhotoCaptured(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
     {
-        Matrix4x4 cameraToWorldMatrix;
-        photoCaptureFrame.TryGetCameraToWorldMatrix(out cameraToWorldMatrix);
-        Matrix4x4 worldToCameraMatrix = cameraToWorldMatrix.inverse;
-
-        Matrix4x4 projectionMatrix;
-        photoCaptureFrame.TryGetProjectionMatrix(out projectionMatrix);
-
         photoCaptureFrame.UploadImageDataToTexture(m_Texture);
         m_Texture.wrapMode = TextureWrapMode.Clamp;
 
+        // Display the image 
         SetImage(m_Texture); 
+
+        // Send picture to the server 
         ServerConnect.S.sendPicture(m_Texture);
-        // m_RawImage.SetNativeSize();
-        Debug.Log("Took picture!");
+        
         m_CapturingPhoto = false;
 
+        // Close the camera 
+        m_PhotoCaptureObj.StopPhotoModeAsync(onStoppedPhotoMode); 
+    }
+    
+    void onStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
+    {
+        m_PhotoCaptureObj.Dispose();
+        m_PhotoCaptureObj = null; 
     }
 
+    // Displays the image onscreen 
     public void SetImage(Texture2D text)
     {
         m_RawImageBig.texture = text;
         m_RawImageSmall.texture = text;
     }
 
+    // Displays a text message from ground control onscreen 
     public void SetText(string text)
     {
         m_sendTextSmall.text = text;
         m_sendTextBig.text = text; 
     }
 
+    // Toggles the size of image and text on display 
     public void ToggleImage()
     {
         if (!m_RawImageBig.gameObject.activeInHierarchy)
@@ -118,36 +133,5 @@ public class HoloLensSnapshotTest : MonoBehaviour
             m_sendTextBig.gameObject.SetActive(false);
             m_sendTextSmall.gameObject.SetActive(true);
         }
-    }
-
-    public void ClearImage()
-    {
-        m_RawImageBig.gameObject.SetActive(false);
-        m_RawImageSmall.gameObject.SetActive(false); 
-    }
-
-    // For Testing Only 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            TakePhoto();
-        }
-    }
-
-    // For testing only 
-    void SetupGestureRecognizer()
-    {
-        m_GestureRecognizer = new GestureRecognizer();
-        m_GestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
-        m_GestureRecognizer.TappedEvent += OnTappedEvent;
-        m_GestureRecognizer.StartCapturingGestures();
-
-        m_CapturingPhoto = false;
-    }
-
-    void OnTappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
-    {
-        TakePhoto();
     }
 }

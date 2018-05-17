@@ -4,21 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
+/// <summary>
+/// Recieves and parses telemetry data from a server. 
+/// </summary>
 public class JSONParse : MonoBehaviour {
 
     public string m_JSONString;
+
+    [Header("Server URLS")]
     public string url = "";
     public string switchUrl = "";
     public const int OBJECTID_LENGTH = 47;
 
     private OutputErrorData m_OutputErrorData;
 
+    [Header("Display Text")]
     public Text bioText;
-    public Text oxygenText;
-    public Text batteryText; 
+    public Text timeLeftText;
 
     [Space(10)]
 
+    // Expected ranges for telemetry data 
     [Header("Ranges")]
 
     [Space(5)]
@@ -105,13 +111,16 @@ public class JSONParse : MonoBehaviour {
                 bioText.text += www.error; 
             } else 
             {
-                bioText.text = "Connected to server!";
+                // We are connected to the server 
+
+                // Use line below only if the JSON comes in with brackets around it 
                 //json = RemoveBrackets(www.downloadHandler.text);
                 json = www.downloadHandler.text;
             }
 
             NASADataType jsonObject = JsonUtility.FromJson<NASADataType>(json);
             
+            // Display Biometrics Data 
             string bioString = "";
             bioString += "Heart Rate: " + jsonObject.heart_bpm.ToString() + " bpm\n";
             bioString += "Suit Pressure: " + jsonObject.p_suit.ToString() + " psid\n";
@@ -124,21 +133,17 @@ public class JSONParse : MonoBehaviour {
             bioString += "H20 Liquid Pressure: " + jsonObject.p_h2o_l.ToString() + " psia\n";
             bioString += "Secondary Oxygen Pack Pressure: " + jsonObject.p_sop.ToString() + " psia\n";
             bioString += "Flow Rate of Secondary Oxygen Pack: " + jsonObject.rate_sop.ToString() + " psi\n";
-            //bioString += "Time Life Battery: " + jsonObject.t_battery + "\n";
-            //bioString += "Time Life Oxygen: " + jsonObject.t_oxygen + "\n";
+            bioString += "Time Life Battery: " + jsonObject.t_battery + "\n";
+            bioString += "Time Life Oxygen: " + jsonObject.t_oxygen + "\n";
             bioString += "Time Life Water: " + jsonObject.t_water + "\n"; 
             bioText.text = bioString;
 
+            // Get the lesser time between oxygen and battery 
             string identifier = "";
-            //string lesserTime = getLesserTime("5", "10", out identifier);
-            //Debug.Log("LesserTime: " + lesserTime);
-            //Debug.Log("Identifier: " + identifier); 
             string lesserTime = getLesserTime(jsonObject.t_oxygen, jsonObject.t_battery, out identifier);
 
-            oxygenText.text = "Time Left: " + lesserTime + " (" + identifier + ")"; 
-
-           // oxygenText.text = "Oxygen: " + jsonObject.t_oxygen.ToString();
-          //  batteryText.text = "Battery: " + jsonObject.t_battery.ToString(); 
+            // Display Time Left 
+            timeLeftText.text = "Time Left: " + lesserTime + " (" + identifier + ")"; 
         }
     }
 
@@ -161,7 +166,6 @@ public class JSONParse : MonoBehaviour {
                 return "Incorrect Oxygen Value";
             }
 
-
             if (intOxygen == 0)
             {
                 MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_Skyfall);
@@ -183,10 +187,7 @@ public class JSONParse : MonoBehaviour {
             {
                 identifier = "Oxygen"; 
                 return strOxygen; 
-            } else
-            {
-                continue; 
-            }
+            } 
         }
 
         // The two strings are equal 
@@ -214,13 +215,14 @@ public class JSONParse : MonoBehaviour {
             }
             else
             {
-                //bioText.text = "Connected to server!";
-                //json = RemoveBrackets(www.downloadHandler.text);
+                // We are connected to the server 
+
+                // Use line below only if the JSON comes in with brackets around it 
+                //json = RemoveBrackets(www.downloadHandler.text);  
                 json = www.downloadHandler.text;
 
             }
-
-           // Debug.Log(json);
+            
             NASADataTypeSwitch jsonObject = JsonUtility.FromJson<NASADataTypeSwitch>(json);
 
             CheckSuitSwitches(jsonObject);
@@ -246,8 +248,6 @@ public class JSONParse : MonoBehaviour {
     private void CheckSuitSwitches(NASADataTypeSwitch ndts)
     {
         m_OutputErrorData.ClearText();
-
-        Debug.Log("Switches be checked, SSPE: " + ndts.sspe);
 
         if (ndts.h2o_off == "true") m_OutputErrorData.OutputErrorText("H2O IS OFF");
         if (ndts.sspe == "true") m_OutputErrorData.OutputErrorText("SUIT P EMERG");
