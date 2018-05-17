@@ -2,26 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
-using System; 
+using System;
+using UnityEngine.Networking;
 
 public class TaskManager : MonoBehaviour {
 
+    // List of Tasks
     public List<List<Task>> allTasks = new List<List<Task>>(); 
     public List<Task> disabAlarm = new List<Task>(); 
     public List<Task> reroutPower = new List<Task>();
+    public List<Task> lightSwitch = new List<Task>(); 
 
+    // Static Array of images for each task 
     public Texture2D[] images; 
 
-    public static TaskManager S; 
+    // Singleton 
+    public static TaskManager S;
 
-	void Start () {
+    // Web Connection 
+    public string url = "";
+    private OutputErrorData m_OutputErrorData;
+
+    public GameObject cube; 
+
+    void Start () {
         S = this; 
 
         populateTasks(); 
 
         allTasks.Add(disabAlarm);
         allTasks.Add(reroutPower);
-	}
+        allTasks.Add(lightSwitch); 
+
+        m_OutputErrorData = FindObjectOfType<OutputErrorData>();
+        InvokeRepeating("UpdateSystemData", 1, 5);
+    }
 
     public string getStep(int task, int step)
     {
@@ -63,7 +78,98 @@ public class TaskManager : MonoBehaviour {
         return retval; 
     }
 
-    private void populateTasks()
+    // Server Connection Stuffs 
+    private void UpdateSystemData()
+    {
+        StartCoroutine(RunWWW());
+    }
+
+    IEnumerator RunWWW()
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get(url + "task.txt"))
+        {
+            yield return www.SendWebRequest();
+
+            string fromServer = "";
+            if (www.isNetworkError)
+            {
+                Debug.Log("NETWORK ERROR Not connected to tasklist server :(");
+            }
+            else if (www.isHttpError)
+            {
+                Debug.Log("HTTP ERROR Not connected to tasklist server :(");
+            }
+            else
+            {
+                //Debug.Log("Connected to tasklist server"); 
+                fromServer = www.downloadHandler.text;
+                //Debug.Log(fromServer);
+                string[] splitString = fromServer.Split('\n');
+
+                Step testStep = new Step();
+                testStep.text = "Hi";
+                testStep.image = "ImagePath";
+                testStep.warning = "You have been warned"; 
+                string json = JsonUtility.ToJson(testStep);
+                //Debug.Log("JSON: " + json);
+
+                
+
+         
+                foreach (string str in splitString)
+                {
+                    Step newStep = JsonUtility.FromJson<Step>(str);
+                    if (newStep == null){ continue; }
+                    //Debug.Log(newStep.text);
+                    string imagePath = newStep.image;
+
+                    StartCoroutine(getImage(imagePath)); 
+
+                }
+            }
+        }
+    }
+
+    IEnumerator getImage(string path)
+    {
+         
+        using (UnityWebRequest www = UnityWebRequest.Get(url + path))
+        {
+            
+            yield return www.SendWebRequest();
+
+           // Debug.Log("URL: " + url + path);
+            byte[] rawImage = www.downloadHandler.data;
+           // Debug.Log(rawImage);
+            Texture2D tx = new Texture2D(1, 1);
+            tx.LoadImage(rawImage);
+
+            cube.GetComponent<Renderer>().material.mainTexture = tx; 
+        }
+    }
+
+            /*   private Texture2D getImage(string path)
+               {
+                   Debug.Log("In getImage"); 
+                   using (UnityWebRequest www = UnityWebRequest.Get(url + path))
+                   {
+                       Debug.Log("URL: " + url + path);
+                       //byte[] rawImage = www.downloadHandler.data;
+                       string rawImage = www.downloadHandler.text;
+                       Debug.Log(rawImage); 
+                       //Debug.Log("Raw Image: " + rawImage.Length); 
+                       //Texture2D tx = new Texture2D(1, 1);
+                       //tx.LoadImage(rawImage);
+
+                       //cube.GetComponent<Renderer>().material.mainTexture = tx; 
+
+                       return null; 
+
+                   }
+               }  */
+
+
+            private void populateTasks()
     {
         disabAlarm.Add(new Task("1. On the RIGHT side of the EVA kit, locate and use the PANEL ACCESS KEY to unlock the PANEL ACCESS DOOR LOCKS.", images[0], "CAUTION: The keys are on the tension-spring cable."));
         disabAlarm.Add(new Task("2. Carefully return keys to the side of the EVA kit.", null, null));
@@ -120,5 +226,34 @@ public class TaskManager : MonoBehaviour {
         reroutPower.Add(new Task("28. Remove the KEY and place it in STORAGE.", images[24], ""));
         reroutPower.Add(new Task("29. Locate the AUX. POWER SWITCH on the POWER IN box and switch it to the 'ON' position.", null, ""));
         reroutPower.Add(new Task("30. Can you please confirm YSE or NO that the SYSTEM GO indicator light is GREEN?", null, ""));
+
+        lightSwitch.Add(new Task("1. Locate the Aux. Power Switch", images[25], ""));
+        lightSwitch.Add(new Task("2. Flip Aux. power switch to OFF position", images[26], ""));
+        lightSwitch.Add(new Task("3. Locate Power Outlet Lock Key tethered to Tether Ubolt", images[27], ""));
+        lightSwitch.Add(new Task("4. Locate Power Outlet Lock", images[28], ""));
+        lightSwitch.Add(new Task("5. Unlock Power Outlet Lock with Power Outlet Lock Key", images[29], ""));
+        lightSwitch.Add(new Task("6. Retether Power Outlet Lock Key and Power Outlet Lock to Tether Ubolt", images[30], ""));
+        lightSwitch.Add(new Task("7. Above Power Outlets, locate the Power Plug", images[31], ""));
+        lightSwitch.Add(new Task("8. Locate the  Power Outlets inside the weather container.", images[32], ""));
+        lightSwitch.Add(new Task("9. Install Power Plug into Power Outlet", images[33], ""));
+        lightSwitch.Add(new Task("10. Close weather container", images[34], ""));
+        lightSwitch.Add(new Task("11. Insert volt lead in the right silver buss opening and gently tighten the thumb screw", images[35], "CAUTION: Ensure lead is completely inside the buss before tightening"));
+        lightSwitch.Add(new Task("12. Locate Wrench Tethered to Tether Ubolt", images[36], ""));
+        lightSwitch.Add(new Task("13. Insert the volt lead in the right terminal block and tighten the nut using the wrench", images[37], "CAUTION: Ensure lead is completely inside the buss before tightening"));
+        lightSwitch.Add(new Task("14. Insert the lead in the left silver buss opening and gently tighten the thumb screw", images[38], "CAUTION: Ensure lead is completely inside the buss before tightening"));
+        lightSwitch.Add(new Task("15. Insert the lead in the Left Terminal Block and tighten the nut using the wrench", images[39], "CAUTION: Ensure lead is completely inside the buss before tightening"));
+        lightSwitch.Add(new Task("16. Conduct a gentle pull test on each", images[40], ""));  
+        lightSwitch.Add(new Task("17. Once secure retether Wrench to Tether Ubolt.", images[41], "CAUTION: Ensure lead is completely inside the buss before tightening"));
+        lightSwitch.Add(new Task("18. Locate the AUX power switch and switch it to the ON position", images[42], "CAUTION: Ensure lead is completely inside the buss before tightening"));
+        lightSwitch.Add(new Task("19. Conform that LED indicator light is GREEN", images[43], ""));
+        lightSwitch.Add(new Task("Congratulations! You have completed the task.", images[44], ""));
     }
+}
+
+[System.Serializable]
+public class Step
+{
+    public string text;
+    public string image;
+    public string warning; 
 }

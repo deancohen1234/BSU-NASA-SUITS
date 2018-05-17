@@ -10,7 +10,9 @@ public class HoloLensSnapshotTest : MonoBehaviour
     public static HoloLensSnapshotTest S; 
 
     public RawImage m_RawImageSmall;
-    public RawImage m_RawImageBig; 
+    public RawImage m_RawImageBig;
+    public Text m_sendTextSmall;
+    public Text m_sendTextBig; 
 
     GestureRecognizer m_GestureRecognizer;
     GameObject m_Canvas = null;
@@ -94,16 +96,27 @@ public class HoloLensSnapshotTest : MonoBehaviour
         m_RawImageSmall.texture = text;
     }
 
+    public void SetText(string text)
+    {
+        m_sendTextSmall.text = text;
+        m_sendTextBig.text = text; 
+    }
+
     public void ToggleImage()
     {
         if (!m_RawImageBig.gameObject.activeInHierarchy)
         {
             m_RawImageBig.gameObject.SetActive(true);
-            m_RawImageSmall.gameObject.SetActive(false); 
+            m_RawImageSmall.gameObject.SetActive(false);
+            m_sendTextBig.gameObject.SetActive(true);
+            m_sendTextSmall.gameObject.SetActive(false); 
+
         } else
         {
             m_RawImageBig.gameObject.SetActive(false);
             m_RawImageSmall.gameObject.SetActive(true);
+            m_sendTextBig.gameObject.SetActive(false);
+            m_sendTextSmall.gameObject.SetActive(true);
         }
     }
 

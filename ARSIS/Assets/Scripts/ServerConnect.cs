@@ -13,6 +13,8 @@ public class ServerConnect : MonoBehaviour
 
     public SocketOptions options;
     public SocketManager socketManager;
+
+    public AudioClip m_messageRecievedAudio; 
     
     void Start()
     {
@@ -55,7 +57,12 @@ public class ServerConnect : MonoBehaviour
         Texture2D tx = new Texture2D(1, 1);
         tx.LoadImage(b64Bytes);
 
-        HoloLensSnapshotTest.S.SetImage(tx); 
+        HoloLensSnapshotTest.S.SetImage(tx);
+        HoloLensSnapshotTest.S.SetText(fromSocket["sendtext"].ToString());
+
+        VoiceManager vm = (VoiceManager)GameObject.FindObjectOfType(typeof(VoiceManager));
+        vm.m_Source.clip = m_messageRecievedAudio;
+        vm.m_Source.Play(); 
     }
     
     void OnConnect(Socket socket, Packet packet, params object[] args)

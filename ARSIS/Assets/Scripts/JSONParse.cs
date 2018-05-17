@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 public class JSONParse : MonoBehaviour {
 
     public string m_JSONString;
-    public string url = "http://localhost/api/recent";
+    public string url = "";
     public string switchUrl = "";
     public const int OBJECTID_LENGTH = 47;
 
@@ -109,8 +109,8 @@ public class JSONParse : MonoBehaviour {
             string bioString = "";
             bioString += "Heart Rate: " + jsonObject.heart_bpm.ToString() + " bpm\n";
             bioString += "Suit Pressure: " + jsonObject.p_suit.ToString() + " psid\n";
-            bioString += "External Enviornment Pressure: " + jsonObject.p_sub.ToString() + " psia\n";
-            bioString += "External Envionrment Temperature: " + jsonObject.t_sub.ToString() + " °F\n";
+            bioString += "External Environment Pressure: " + jsonObject.p_sub.ToString() + " psia\n";
+            bioString += "External Environment Temperature: " + jsonObject.t_sub.ToString() + "° F\n";
             bioString += "Fan Rotation Speed: " + jsonObject.v_fan.ToString() + " rpm\n";
             bioString += "Primary Oxygen Tank Pressure: " + jsonObject.p_o2.ToString() + " psia\n";
             bioString += "Battery Capacity: " + jsonObject.cap_battery.ToString() + " A-hr\n";
@@ -123,9 +123,69 @@ public class JSONParse : MonoBehaviour {
             bioString += "Time Life Water: " + jsonObject.t_water + "\n"; 
             bioText.text = bioString;
 
-            oxygenText.text = "Oxygen: " + jsonObject.t_oxygen.ToString();
-            batteryText.text = "Battery: " + jsonObject.t_battery.ToString(); 
+            string identifier = "";
+            //string lesserTime = getLesserTime("5", "10", out identifier);
+            //Debug.Log("LesserTime: " + lesserTime);
+            //Debug.Log("Identifier: " + identifier); 
+            string lesserTime = getLesserTime(jsonObject.t_oxygen, jsonObject.t_battery, out identifier);
+
+            oxygenText.text = "Time Left: " + lesserTime + " (" + identifier + ")"; 
+
+           // oxygenText.text = "Oxygen: " + jsonObject.t_oxygen.ToString();
+          //  batteryText.text = "Battery: " + jsonObject.t_battery.ToString(); 
         }
+    }
+
+    private string getLesserTime(string strOxygen, string strBattery, out string identifier)
+    {
+        string[] strOxygenParsed = strOxygen.Split(':');
+        string[] strBatteryParsed = strBattery.Split(':'); 
+
+        for (int i = 0; i < strOxygenParsed.Length; i++)
+        {
+            int intOxygen = int.MaxValue; 
+            int intBattery = int.MaxValue;
+
+            bool oxygenOk = int.TryParse(strOxygenParsed[i], out intOxygen);
+            bool batteryOk = int.TryParse(strBatteryParsed[i], out intBattery);
+
+            if (!oxygenOk)
+            {
+                identifier = "Error";
+                return "Incorrect Oxygen Value";
+            }
+
+
+            if (intOxygen == 0)
+            {
+                MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_Skyfall);
+                identifier = "Oxygen is out";
+                return strOxygen;
+            }
+
+            if (!batteryOk)
+            {
+                identifier = "Error";
+                return "Incorrect Battery Value"; 
+            }
+
+            if (intOxygen > intBattery)
+            {
+                identifier = "Battery"; 
+                return strBattery; 
+            } else if (intOxygen < intBattery)
+            {
+                identifier = "Oxygen"; 
+                return strOxygen; 
+            } else
+            {
+                continue; 
+            }
+        }
+
+        // The two strings are equal 
+        identifier = "Battery and Oxygen"; 
+        return strBattery; 
     }
 
     IEnumerator RunSwitchWWW()

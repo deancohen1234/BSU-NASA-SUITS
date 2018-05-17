@@ -19,6 +19,7 @@ public class VoiceManager : MonoBehaviour {
 
     [Header("Audio")]
     public AudioSource m_Source;
+    public AudioSource m_musicSource; 
 
     public AudioClip m_OpenMenu;
     public AudioClip m_CloseMenu;
@@ -67,10 +68,18 @@ public class VoiceManager : MonoBehaviour {
         // Tasks 
         _keywords.Add("Disable Alarm", disableAlarm);
         _keywords.Add("Reroute Power", reroutePower);
+        _keywords.Add("Light Switch", lightSwitch); 
 
         //Music
         _keywords.Add("Adele Hello", PlayAdele);
-        _keywords.Add("Stop", StopMusic);
+        _keywords.Add("Adele Africa", PlayAfrica);
+        _keywords.Add("Adele Skyfall", PlaySkyfall);
+        _keywords.Add("Adele Space Oddity", PlaySpaceOddity);
+        _keywords.Add("Adele Thunderstruck", PlayThunderstruck);
+        _keywords.Add("Adele Stop", StopMusic);
+        _keywords.Add("Adele Music", musicMenu);
+        _keywords.Add("Adele Eclipse", PlayEclipse);
+        _keywords.Add("Adele Rocket Man", PlayRocketMan);
 
         #endregion
 
@@ -91,6 +100,11 @@ public class VoiceManager : MonoBehaviour {
     private void MainMenu()
     {
         mc.ChangeMenu(mc.m_mainMenu); 
+    }
+
+    private void musicMenu()
+    {
+        mc.ChangeMenu(mc.m_musicMenu);
     }
 
     public void Settings()
@@ -192,6 +206,7 @@ public class VoiceManager : MonoBehaviour {
             if (m_Source.volume < 1)
             {
                 m_Source.volume += 0.2f;
+                m_musicSource.volume += 0.2f; 
                 SliderMove sm = mc.m_CurrentMenu.GetComponent<SliderMove>();
                 sm.Increase();
 
@@ -223,6 +238,7 @@ public class VoiceManager : MonoBehaviour {
             if (m_Source.volume > 0)
             {
                 m_Source.volume -= 0.2f;
+                m_musicSource.volume -= 0.2f;
                 SliderMove sm = mc.m_CurrentMenu.GetComponent<SliderMove>();
                 sm.Decrease();
 
@@ -320,13 +336,50 @@ public class VoiceManager : MonoBehaviour {
         generateTaskMenu();
     }
 
+    private void lightSwitch()
+    {
+        mc.currentTask = 3;
+        mc.currentStep = 1;
+        generateTaskMenu(); 
+    }
+
     #endregion
 
     #region Music Functions 
 
     private void PlayAdele()
     {
-        MusicManager.m_Instance.PlayAdele();
+        MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_AdeleSong);
+    }
+
+    private void PlayAfrica()
+    {
+        MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_Africa);
+    }
+
+    private void PlaySkyfall()
+    {
+        MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_Skyfall);
+    }
+
+    private void PlaySpaceOddity()
+    {
+        MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_SpaceOddity);
+    }
+
+    private void PlayThunderstruck()
+    {
+        MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_Thunderstruck);
+    }
+
+    private void PlayEclipse()
+    {
+        MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_Eclipse); 
+    }
+
+    private void PlayRocketMan()
+    {
+        MusicManager.m_Instance.PlaySong(MusicManager.m_Instance.m_RocketMan); 
     }
 
     private void StopMusic()
@@ -334,7 +387,7 @@ public class VoiceManager : MonoBehaviour {
         MusicManager.m_Instance.StopMusic();
     }
     #endregion 
-
+    
     // Keyword Recognition 
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {

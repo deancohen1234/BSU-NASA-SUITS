@@ -23,7 +23,8 @@ public class MenuController : MonoBehaviour
     public GameObject m_sosMenu;
     public GameObject m_helpMenu;
     public GameObject m_biometricsMenu;
-    public GameObject m_taskList; 
+    public GameObject m_taskList;
+    public GameObject m_musicMenu;
 
     public GameObject m_blankTaskMenu;
     public Text m_stepText;
@@ -126,9 +127,15 @@ public class MenuController : MonoBehaviour
 
         Vector3 cameraPos = Camera.main.transform.position;
 
-        holoMenu.transform.rotation = Quaternion.Euler(new Vector3(holoMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z));
+
+        //holoMenu.transform.rotation = Quaternion.Euler(new Vector3(holoMenu.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z));
 
         holoMenu.transform.position += new Vector3(0, .125f, 0);
+
+        Quaternion q = Quaternion.LookRotation(holoMenu.transform.position - Camera.main.transform.position, Camera.main.transform.up);
+
+        holoMenu.transform.rotation = q;
+        holoMenu.transform.rotation = Quaternion.Euler(holoMenu.transform.eulerAngles.x + 90, holoMenu.transform.eulerAngles.y, holoMenu.transform.eulerAngles.z);
 
         m_CurrentMenu = holoMenu;
     }
