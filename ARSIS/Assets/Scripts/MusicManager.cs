@@ -21,7 +21,7 @@ public class MusicManager : MonoBehaviour {
 
     public void PlaySong(AudioClip clip)
     {
-        if (!m_Source.isPlaying)
+        if (!m_Source.isPlaying || m_Source.clip != clip)
         {
             m_Source.clip = clip;
             m_Source.Play();

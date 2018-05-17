@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-16T23:13:00.999</Modified>
+      <Modified>2018-05-17T19:14:39.829</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\bin\x86\Debug\ARSIS.exe">
       <PackagePath>entrypoint\ARSIS.exe</PackagePath>
-      <Modified>2018-05-16T23:12:46.521</Modified>
+      <Modified>2018-05-17T19:14:25.869</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\.nuget\packages\microsoft.applicationinsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -501,7 +501,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Resource.res">
       <PackagePath>Resource.res</PackagePath>
-      <Modified>2018-05-16T23:11:12.367</Modified>
+      <Modified>2018-05-17T19:13:12.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
@@ -543,15 +543,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
-      <Modified>2018-05-16T23:10:26.166</Modified>
+      <Modified>2018-05-17T19:12:27.031</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\globalgamemanagers">
       <PackagePath>Data\globalgamemanagers</PackagePath>
-      <Modified>2018-05-16T23:10:25.026</Modified>
+      <Modified>2018-05-17T19:12:20.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\level0">
       <PackagePath>Data\level0</PackagePath>
-      <Modified>2018-05-16T23:10:23.531</Modified>
+      <Modified>2018-05-17T19:12:18.978</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\Resources\unity default resources">
       <PackagePath>Data\Resources\unity default resources</PackagePath>
@@ -559,43 +559,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\Resources\unity_builtin_extra">
       <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
-      <Modified>2018-05-16T23:10:26.163</Modified>
+      <Modified>2018-05-17T19:12:27.028</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\globalgamemanagers.assets">
       <PackagePath>Data\globalgamemanagers.assets</PackagePath>
-      <Modified>2018-05-16T23:10:25.297</Modified>
+      <Modified>2018-05-17T19:12:20.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\resources.assets">
       <PackagePath>Data\resources.assets</PackagePath>
-      <Modified>2018-05-16T23:10:25.338</Modified>
+      <Modified>2018-05-17T19:12:20.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
-      <Modified>2018-05-16T23:10:25.758</Modified>
+      <Modified>2018-05-17T19:12:26.667</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\level0.resS">
       <PackagePath>Data\level0.resS</PackagePath>
-      <Modified>2018-05-16T23:10:23.528</Modified>
+      <Modified>2018-05-17T19:12:18.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\sharedassets0.assets.resS">
       <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
-      <Modified>2018-05-16T23:10:25.758</Modified>
+      <Modified>2018-05-17T19:12:26.667</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\managedAssemblies.txt">
       <PackagePath>Data\managedAssemblies.txt</PackagePath>
-      <Modified>2018-05-16T23:11:12.311</Modified>
+      <Modified>2018-05-17T19:13:12.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\nativePlugins.txt">
       <PackagePath>Data\nativePlugins.txt</PackagePath>
-      <Modified>2018-05-16T23:11:12.312</Modified>
+      <Modified>2018-05-17T19:13:12.365</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\resources.resource">
       <PackagePath>Data\resources.resource</PackagePath>
-      <Modified>2018-05-16T23:10:25.340</Modified>
+      <Modified>2018-05-17T19:12:20.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Data\sharedassets0.resource">
       <PackagePath>Data\sharedassets0.resource</PackagePath>
-      <Modified>2018-05-16T23:10:25.762</Modified>
+      <Modified>2018-05-17T19:12:26.672</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.16299.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -608,203 +608,203 @@
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-16T19:52:49.638</Modified>
+      <Modified>2018-05-17T18:04:16.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.TilemapModule.dll">
       <PackagePath>UnityEngine.TilemapModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.716</Modified>
+      <Modified>2018-05-17T19:14:37.960</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UNETModule.dll">
       <PackagePath>UnityEngine.UNETModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.731</Modified>
+      <Modified>2018-05-17T19:14:37.979</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UIModule.dll">
       <PackagePath>UnityEngine.UIModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.741</Modified>
+      <Modified>2018-05-17T19:14:37.991</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UIElementsModule.dll">
       <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.769</Modified>
+      <Modified>2018-05-17T19:14:38.041</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.StyleSheetsModule.dll">
       <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.776</Modified>
+      <Modified>2018-05-17T19:14:38.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.SpriteMaskModule.dll">
       <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.782</Modified>
+      <Modified>2018-05-17T19:14:38.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.ScreenCaptureModule.dll">
       <PackagePath>UnityEngine.ScreenCaptureModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.787</Modified>
+      <Modified>2018-05-17T19:14:38.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.TextRenderingModule.dll">
       <PackagePath>UnityEngine.TextRenderingModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.795</Modified>
+      <Modified>2018-05-17T19:14:38.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.TerrainPhysicsModule.dll">
       <PackagePath>UnityEngine.TerrainPhysicsModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.800</Modified>
+      <Modified>2018-05-17T19:14:38.078</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.TerrainModule.dll">
       <PackagePath>UnityEngine.TerrainModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.821</Modified>
+      <Modified>2018-05-17T19:14:38.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.VRModule.dll">
       <PackagePath>UnityEngine.VRModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.840</Modified>
+      <Modified>2018-05-17T19:14:38.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.VideoModule.dll">
       <PackagePath>UnityEngine.VideoModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.847</Modified>
+      <Modified>2018-05-17T19:14:38.111</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.VehiclesModule.dll">
       <PackagePath>UnityEngine.VehiclesModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.853</Modified>
+      <Modified>2018-05-17T19:14:38.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.WindModule.dll">
       <PackagePath>UnityEngine.WindModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.859</Modified>
+      <Modified>2018-05-17T19:14:38.121</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.WebModule.dll">
       <PackagePath>UnityEngine.WebModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.866</Modified>
+      <Modified>2018-05-17T19:14:38.128</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UnityWebRequestAudioModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.872</Modified>
+      <Modified>2018-05-17T19:14:38.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UnityConnectModule.dll">
       <PackagePath>UnityEngine.UnityConnectModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.879</Modified>
+      <Modified>2018-05-17T19:14:38.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UnityAnalyticsModule.dll">
       <PackagePath>UnityEngine.UnityAnalyticsModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.885</Modified>
+      <Modified>2018-05-17T19:14:38.146</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UnityWebRequestWWWModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.893</Modified>
+      <Modified>2018-05-17T19:14:38.152</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UnityWebRequestTextureModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestTextureModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.898</Modified>
+      <Modified>2018-05-17T19:14:38.158</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UnityWebRequestModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.905</Modified>
+      <Modified>2018-05-17T19:14:38.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.PhysicsModule.dll">
       <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:58.917</Modified>
+      <Modified>2018-05-17T19:14:38.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.CoreModule.dll">
       <PackagePath>UnityEngine.CoreModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.163</Modified>
+      <Modified>2018-05-17T19:14:38.393</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.ClothModule.dll">
       <PackagePath>UnityEngine.ClothModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.169</Modified>
+      <Modified>2018-05-17T19:14:38.399</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.AudioModule.dll">
       <PackagePath>UnityEngine.AudioModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.179</Modified>
+      <Modified>2018-05-17T19:14:38.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.dll">
       <PackagePath>UnityEngine.dll</PackagePath>
-      <Modified>2018-05-16T23:10:43.969</Modified>
+      <Modified>2018-05-17T19:12:44.487</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.DirectorModule.dll">
       <PackagePath>UnityEngine.DirectorModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.185</Modified>
+      <Modified>2018-05-17T19:14:38.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.CrashReportingModule.dll">
       <PackagePath>UnityEngine.CrashReportingModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.190</Modified>
+      <Modified>2018-05-17T19:14:38.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.AccessibilityModule.dll">
       <PackagePath>UnityEngine.AccessibilityModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.195</Modified>
+      <Modified>2018-05-17T19:14:38.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\Assembly-CSharp.dll">
       <PackagePath>Assembly-CSharp.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.670</Modified>
+      <Modified>2018-05-17T19:14:38.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.ARModule.dll">
       <PackagePath>UnityEngine.ARModule.dll</PackagePath>
-      <Modified>2018-05-16T23:12:59.678</Modified>
+      <Modified>2018-05-17T19:14:38.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.AnimationModule.dll">
       <PackagePath>UnityEngine.AnimationModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.127</Modified>
+      <Modified>2018-05-17T19:14:38.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.AIModule.dll">
       <PackagePath>UnityEngine.AIModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.137</Modified>
+      <Modified>2018-05-17T19:14:38.929</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.ParticlesLegacyModule.dll">
       <PackagePath>UnityEngine.ParticlesLegacyModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.143</Modified>
+      <Modified>2018-05-17T19:14:38.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.JSONSerializeModule.dll">
       <PackagePath>UnityEngine.JSONSerializeModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.148</Modified>
+      <Modified>2018-05-17T19:14:38.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.Physics2DModule.dll">
       <PackagePath>UnityEngine.Physics2DModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.164</Modified>
+      <Modified>2018-05-17T19:14:38.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.PerformanceReportingModule.dll">
       <PackagePath>UnityEngine.PerformanceReportingModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.170</Modified>
+      <Modified>2018-05-17T19:14:38.962</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.ParticleSystemModule.dll">
       <PackagePath>UnityEngine.ParticleSystemModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.185</Modified>
+      <Modified>2018-05-17T19:14:38.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.GridModule.dll">
       <PackagePath>UnityEngine.GridModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.191</Modified>
+      <Modified>2018-05-17T19:14:38.982</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.GameCenterModule.dll">
       <PackagePath>UnityEngine.GameCenterModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.199</Modified>
+      <Modified>2018-05-17T19:14:38.990</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.InputModule.dll">
       <PackagePath>UnityEngine.InputModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.206</Modified>
+      <Modified>2018-05-17T19:14:38.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.IMGUIModule.dll">
       <PackagePath>UnityEngine.IMGUIModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.227</Modified>
+      <Modified>2018-05-17T19:14:39.037</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.ImageConversionModule.dll">
       <PackagePath>UnityEngine.ImageConversionModule.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.233</Modified>
+      <Modified>2018-05-17T19:14:39.043</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.Timeline.dll">
       <PackagePath>UnityEngine.Timeline.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.270</Modified>
+      <Modified>2018-05-17T19:14:39.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\nunit.framework.dll">
       <PackagePath>nunit.framework.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.308</Modified>
+      <Modified>2018-05-17T19:14:39.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.UI.dll">
       <PackagePath>UnityEngine.UI.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.396</Modified>
+      <Modified>2018-05-17T19:14:39.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.HoloLens.dll">
       <PackagePath>UnityEngine.HoloLens.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.409</Modified>
+      <Modified>2018-05-17T19:14:39.258</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\UnityEngine.Networking.dll">
       <PackagePath>UnityEngine.Networking.dll</PackagePath>
-      <Modified>2018-05-16T23:13:00.462</Modified>
+      <Modified>2018-05-17T19:14:39.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\othm\Documents\GitHub\SUITS-Recover\BSU-NASA-SUITS\ARSIS\App\ARSIS\bin\x86\Debug\Core\ARSIS.exe">
       <PackagePath>ARSIS.exe</PackagePath>
-      <Modified>2018-05-16T23:13:00.989</Modified>
+      <Modified>2018-05-17T19:14:39.824</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

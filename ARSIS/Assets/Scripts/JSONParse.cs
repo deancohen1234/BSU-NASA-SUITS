@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Networking; 
+using UnityEngine.Networking;
 
 public class JSONParse : MonoBehaviour {
 
@@ -73,11 +73,17 @@ public class JSONParse : MonoBehaviour {
     {
         m_OutputErrorData = FindObjectOfType<OutputErrorData>();
         InvokeRepeating("UpdateSystemData", 1, 5);
-	}
+        InvokeRepeating("UpdateSystemSwitchData", 2, 3);
+    }
 
     private void UpdateSystemData()
     {
         StartCoroutine(RunWWW());
+        
+    }
+
+    private void UpdateSystemSwitchData()
+    {
         StartCoroutine(RunSwitchWWW());
     }
     
@@ -240,7 +246,9 @@ public class JSONParse : MonoBehaviour {
     private void CheckSuitSwitches(NASADataTypeSwitch ndts)
     {
         m_OutputErrorData.ClearText();
-        
+
+        Debug.Log("Switches be checked, SSPE: " + ndts.sspe);
+
         if (ndts.h2o_off == "true") m_OutputErrorData.OutputErrorText("H2O IS OFF");
         if (ndts.sspe == "true") m_OutputErrorData.OutputErrorText("SUIT P EMERG");
         if (ndts.fan_error == "true") m_OutputErrorData.OutputErrorText("FAN SW OFF");
@@ -301,6 +309,7 @@ public class NASADataType
     public string t_water = "";
 }
 
+[System.Serializable]
 public class NASADataTypeSwitch
 {
     public string create_date = "";
